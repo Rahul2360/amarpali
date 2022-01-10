@@ -1,0 +1,38 @@
+.profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+.profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar{
+  font-size: 18px ;
+  margin: 27px 33px  17px 36px;
+background: #212431;
+}
+#navbar li{
+  margin: 27px 7px 29px 0px
+}
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("/home/vivek/Desktop/Test/hero-bg.jpg") top center;
+  background-size: cover;
+}
+.hero-container{
+  left:auto
+}
