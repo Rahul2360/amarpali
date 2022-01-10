@@ -12,8 +12,10 @@
     position: absolute;
     /* border: solid black 3px;
     background-color: rgb(248, 245, 245); */
-    margin-top: 72px;
-    margin-left: 29%;
+    /* margin-top: 72px;
+    margin-left: 29%; */
+    top: 5rem;
+    left: 21rem;
     width: 39rem;
     height: 36rem;
     box-shadow: grey -5px 6px 18px 0px;
@@ -74,9 +76,9 @@
     left: 10rem;
     color: crimson;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
    *{
-      background-color: lightblue;
+      /* background-color: lightblue; */
     }
     .contain{
         height: 56rem;
