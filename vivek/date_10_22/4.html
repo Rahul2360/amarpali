@@ -11,6 +11,7 @@
     <title>Form</title>
   </head>
   <body>
+    
         <div class="contain">
             <div class="heading">
             <h1>Signup</h1>
@@ -21,13 +22,13 @@
                 <div class=" form-group row">
                   <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword">
+                    <input type="text" class="form-control" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputPassword" class="col-sm-2 col-form-label"  >Email</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputPassword">
+                    <input type="email" class="form-control" required>
                   </div>
                 </div>
                 <div class=" form-group row">
@@ -48,18 +49,29 @@
                 <div class=" formspl">
                     <div class="forcheck">
                       <div class="box">
-                        <input type="checkbox" >
+                        <input type="checkbox" id="tick" value="" >
                         <span  class="col-sm-2 col-form-label">I accept the <a href="#">terms of use</a>  & <a href="#"> Privacy Policy</a></span>
+                        <label id="mass" value=""></label>
                       </div>
                       <div class="btn">
-                        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="btn" value="submit" class="btn btn-primary">Submit</button>
                       </div>
                     
               </form>
               
         </div>
         <script>
+          const cb = document.getElementById("tick");
+          var btn= document.querySelector('#btn')
+          btn.addEventListener('click',(event)=>{
+            if((cb.checked)!=true){
+              console.log("false");
+              document.getElementById("mass").innerHTML="*--check the checkbox please--*"
+            }
+          });
         function checkpass(){
+          
+
           var pass = document.getElementById("psswd").value;
           var conpass = document.getElementById("conpass").value;
           if(pass!=conpass){

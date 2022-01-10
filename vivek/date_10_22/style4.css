@@ -73,7 +73,7 @@
 }
 #massege{
     position: relative;
-    left: 10rem;
+    left: 4rem;
     color: crimson;
 }
 @media only screen and (max-width: 599px) {
@@ -92,4 +92,10 @@
         position: relative;
         left: 50%;
     }
+}
+#mass{
+    display: block;
+    position: absolute;
+    left: 1rem;
+    color: crimson;
 }
