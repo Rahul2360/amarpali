@@ -11,9 +11,9 @@
     <title>Form</title>
   </head>
   <body>
-    <div class=" mt-3 " style="left: 48%; position: relative;">
+    <div class="" style="left: 50%; position: absolute; margin-bottom: 6rem;">
         <h1>Form</h1>
-        <div class="d-block bg-success" style="width: 100px; height: 3px;">
+        <div class="bg-success" style="width: 7rem; height: 0.3rem; position: static;">
     
         </div>
         </div>
@@ -23,30 +23,32 @@
             <h1>Signup</h1>
             <div class="signbor"></div>
             </div>
-            <form  >
+            <form  onsubmit="return checkpass()">
                 <div class="formcont">
                 <div class=" form-group row">
                   <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputPassword">
+                    <input type="text" class="form-control" id="inputPassword">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label"  >Email</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="email" class="form-control" id="inputPassword">
                   </div>
                 </div>
                 <div class=" form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">password</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputPassword">
+                      <input type="password" class="form-control" id="psswd" value="">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">confirm Password</label>
+                    <label for="inputPassword" class="col-sm-2 col-form-label" >confirm Password</label>
+                    
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword">
+                      <input type="password" class="form-control" id="conpass" value="">
+                      <span id="massege" value=""></span>
                     </div>
                   </div>
                 </div>
@@ -54,15 +56,45 @@
                     <div class="forcheck">
                       <div class="box">
                         <input type="checkbox" >
-                        <span for="inputPassword" class="col-sm-2 col-form-label">I accept the terms of use & Privacy Policy</span>
+                        <span  class="col-sm-2 col-form-label">I accept the <a href="#">terms of use</a>  & <a href="#"> Privacy Policy</a></span>
                       </div>
                       <div class="btn">
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
                       </div>
                     
               </form>
               
         </div>
+        <script>
+        function checkpass(){
+          var pass = document.getElementById("psswd").value;
+          var conpass = document.getElementById("conpass").value;
+          if(pass!=conpass){
+            
+              document.getElementById("massege").innerHTML="*--Wrong pass--*";
+              return false;
+          }
+         if(pass==""){
+          
+            document.getElementById("massege").innerHTML="*--Password must not be empty--*";
+            return false;
+          }
+          if(pass.length<8){
+            document.getElementById("massege").innerHTML="*--Password must Contain atleast 8 character--*";
+            return false;
+          }
+          else{
+            
+            alert("correct password");
+            document.getElementById("massege").style.color="#00FF00";
+            document.getElementById("massege").innerHTML="*--Welcome To Our Page--*";
+            return false;
+
+          
+        }
+            
+        }  
+        </script>
    
   </body>
 </html>

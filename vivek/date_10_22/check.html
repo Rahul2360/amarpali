@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  onsubmit="return checkpass()">
+        <div class="formcont">
+        <div class=" form-group row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputPassword">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword" class="col-sm-2 col-form-label"  >Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputPassword">
+          </div>
+        </div>
+        <div class=" form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="psswd" value="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label" id="conpass" value="">confirm Password</label>
+            
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+              <span id="massege" value=""></span>
+            </div>
+          </div>
+        </div>
+        <div class=" formspl">
+            <div class="forcheck">
+              <div class="box">
+                <input type="checkbox" >
+                <span  class="col-sm-2 col-form-label">I accept the terms of use & Privacy Policy</span>
+              </div>
+              <div class="btn">
+                <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+              </div>
+            
+      </form>
+      
+</div>
+<script>
+function checkpass(){
+  var pass = document.getElementById("psswd").value;
+  var conpass = document.getElementById("conpass").value;
+  if(pass!=conpass){
+      document.getElementById("massege").innerHTML="*";
+      return false;
+  }
+}  
+</script>
+</body>
+</html>
