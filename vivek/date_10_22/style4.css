@@ -73,6 +73,7 @@
 }
 #massege{
     position: relative;
+    font-size: 18px;
     left: 4rem;
     color: crimson;
 }
@@ -96,6 +97,7 @@
 #mass{
     display: block;
     position: absolute;
+    font-size: 18px;
     left: 1rem;
     color: crimson;
 }
