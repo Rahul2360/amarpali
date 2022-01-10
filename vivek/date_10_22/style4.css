@@ -1,0 +1,70 @@
+*{  
+    margin: 0px;
+    padding: 0px;
+    background-color: floralwhite;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+
+.contain{
+    overflow-y: visible;
+    position: absolute;
+    /* border: solid black 3px;
+    background-color: rgb(248, 245, 245); */
+    margin-top: 40px;
+    margin-left: 29%;
+    width: 44%;
+    height: 80%;
+    box-shadow: grey -5px 6px 18px 0px;
+}
+/* .sign{
+    position:absolute;
+   
+} */
+.signbor{
+    position:absolute;
+    margin: 5px auto; 
+    width: 120px; 
+    height: 3px; 
+    background-color: cyan;
+} 
+.heading{
+    margin: 18px auto;
+    width: 147px;
+    height: 80px;
+    /* border: solid cyan 3px;
+    background-color: rgb(248, 245, 245); */
+
+}
+.formcont{
+    position: absolute;
+    
+    width: 90%;
+    left: 17px;
+}
+.formcont div{
+    margin-bottom: 15px;
+}
+.formcont input{
+    margin-left: 30px;
+    width: 85%;
+}
+.formcont .col-sm-2{
+    width: 16%;
+}
+.formspl {
+    position: absolute;
+    /* background-color: darkgreen; */
+    top:72%;
+    left: 20%;
+    
+}
+.formspl span{
+    width: 110%;
+}
+.btn{
+    margin-left: 38px;
+    margin-top: 20px;
+    width: 150px;
+}

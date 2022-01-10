@@ -1,0 +1,12 @@
+.chameli{
+    margin-left: 52%;
+     margin-top: 30px;
+}
+.chameli .btn{
+   border: solid black 2px;
+   transition: background-color 3s;
+   transition-timing-function: ease;
+}
+.chameli .btn:hover{
+    background-color: blue;
+}
