@@ -74,23 +74,24 @@
             var pass = document.getElementById("psswd").value;
           var conpass = document.getElementById("conpass").value;
           if(pass!=conpass){
-            
+            document.getElementById("massege").style.color="#dc143c";
               document.getElementById("massege").innerHTML="*--Wrong pass--*";
               
           }
          if(pass==""){
-          
+           document.getElementById("massege").style.color="#dc143c";
             document.getElementById("massege").innerHTML="*--Password must not be empty--*";
             return false;
           }
           if(pass.length<8){
+            document.getElementById("massege").style.color="#dc143c";
             document.getElementById("massege").innerHTML="*--Password must Contain atleast 8 character--*";
             r
           }
-          else{
+          if(pass==conpass){
             
             document.getElementById("massege").style.color="#00FF00";
-            document.getElementById("massege").innerHTML="*--Welcome To Our Page--*";
+            document.getElementById("massege").innerHTML="*--Welcome To Our Page--*" +""|+pass +""|+conpass;
             
         }
           });
