@@ -65,8 +65,11 @@
           var btn= document.querySelector('#btn')
           btn.addEventListener('click',(event)=>{
             if((cb.checked)!=true){
-              console.log("false");
               document.getElementById("mass").innerHTML="*--check the checkbox please--*"
+            }
+            if((cb.checked)!=false)
+            {
+              document.getElementById("mass").innerHTML=""
             }
             var pass = document.getElementById("psswd").value;
           var conpass = document.getElementById("conpass").value;
