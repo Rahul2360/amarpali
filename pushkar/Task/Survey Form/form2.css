@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+hr.col {
+border-top: 2px solid red;
+}
+.para{
+    margin-left: 25px;
+    margin-top: 20px;
+    
+}
+.btnmod{
+    border: 1px solid black !important;
+} 
+.btn:hover{
+    background-color: lightslategray;
+}
