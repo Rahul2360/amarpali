@@ -15,6 +15,11 @@
      </script>
     <title>Sign Up Form</title>
 </head>
+<script>
+
+  var pwd= document.getElementById('pswd')
+  console.log(pwd);
+</script>
 <body style="">
     <div class="container mt-4 shadow-lg con " style="padding-bottom: 60px;">
         <div class="conatiner con">
@@ -25,25 +30,25 @@
                 <div class="form-group row">
                     <label for="Username" class="col-sm-4 col-form-label">Username</label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control" id="">
+                      <input type="text" class="form-control" id="" required>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="emailaddress" class="col-sm-4 col-form-label">Email Address</label>
                     <div class="col-sm-5">
-                      <input type="email" class="form-control" id="inputPassword">
+                      <input type="email" class="form-control" id="email" required>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="Password" class="col-sm-4 col-form-label">Password</label>
                     <div class="col-sm-5">
-                      <input type="password" class="form-control" id="">
+                      <input type="password" class="form-control" id="pswd" required minlength="8">
                     </div>
                   </div>
                   <div class="form-group row " style="margin-top: 10px;">
                     <label for="ConfirmPassword" class="col-sm-4 col-form-label">Confirm Password</label>
                     <div class="col-sm-5">
-                      <input type="password" class="form-control" id="inputPassword">
+                      <input type="password" class="form-control" id="cpswd" required>
                     </div>
                   </div>
                   <div class="custom-control custom-checkbox text-center" style="margin-bottom: 60px;">
@@ -51,7 +56,7 @@
                     <label class="custom-control-label" for="customCheck1">I accept the <span>Terms of Use</span> & <span> Privacy Policy</span> </label>
                   </div>
                   <div class="text-center">
-                    <button class="btn btn-success" type="submit" style="width: 230px; height: 60px; font-size:28px; font-weight: bolder;">Sign Up</button>
+                    <button class="btn btn-success" value="submit" onclick="return check()" style="width: 230px; height: 60px; font-size:28px; font-weight: bolder;">Sign Up</button>
                   </div>
             </form>
             
@@ -59,7 +64,22 @@
         </div>
         <div class="text-center" style="margin-top: 20px;">
             
-            <label class="" for="">Already have an account? <a href="https://google.com" style="color: #6ee95e; font-weight: bold;">  Login here </a> </label>
+            <label class="">Already have an account? <a href="https://google.com" style="color: #6ee95e; font-weight: bold;">  Login here </a> </label>
           </div>
+        <script>
+          function check(){
+            var pass = document.getElementById('pswd').value
+            var cpass=document.getElementById('cpswd').value
+            var tick=document.getElementById('customCheck1').checked
+            if(pass!=cpass){
+              alert("Password and Confirm Password should be same")
+              }
+              else{
+                if(tick==false){
+                  alert("Please accept our terms and conditins!")
+            }
+              }
+            }
+        </script>
 </body>
 </html>
