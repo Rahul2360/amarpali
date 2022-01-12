@@ -14,7 +14,7 @@
 
 <body style="background-image: url('back.jpeg'); width:100%;background-repeat: no-repeat;background-size: cover;">
     <div class="card">
-        <form class="form-container">
+        <form class="form-container" id="form">
             <h5>Rate My Service</h5>
             <hr color="red">
             <div class="row mb-3">
@@ -30,24 +30,25 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <p class="page-header">0-5 being poor 6-7 being average 8-10 being excellent</p>
-                            <div class="chart-scale">
-                                <button class="btn btn-scale btn-scale-asc-1">1</button>
-                                <button class="btn btn-scale btn-scale-asc-2">2</button>
-                                <button class="btn btn-scale btn-scale-asc-3">3</button>
-                                <button class="btn btn-scale btn-scale-asc-4">4</button>
-                                <button class="btn btn-scale btn-scale-asc-5">5</button>
-                                <button class="btn btn-scale btn-scale-asc-6">6</button>
-                                <button class="btn btn-scale btn-scale-asc-7">7</button>
-                                <button class="btn btn-scale btn-scale-asc-8">8</button>
-                                <button class="btn btn-scale btn-scale-asc-9">9</button>
-                                <button class="btn btn-scale btn-scale-asc-10">10</button>
+                            <div id="DIVbtns" class="chart-scale" onclick="event.preventDefault();">
+
+                                <button class="btn btn-scale btn-scale-asc-1" onclick="selectBtn(this.id)">1</button>
+                                <button class="btn btn-scale btn-scale-asc-2" onclick="selectBtn(this.id)">2</button>
+                                <button class="btn btn-scale btn-scale-asc-3" onclick="selectBtn(this.id)">3</button>
+                                <button class="btn btn-scale btn-scale-asc-4" onclick="selectBtn(this.id)">4</button>
+                                <button class="btn btn-scale btn-scale-asc-5" onclick="selectBtn(this.id)">5</button>
+                                <button class="btn btn-scale btn-scale-asc-6" onclick="selectBtn(this.id)">6</button>
+                                <button class="btn btn-scale btn-scale-asc-7" onclick="selectBtn(this.id)">7</button>
+                                <button class="btn btn-scale btn-scale-asc-8" onclick="selectBtn(this.id)">8</button>
+                                <button class="btn btn-scale btn-scale-asc-9" onclick="selectBtn(this.id)">9</button>
+                                <button class="btn btn-scale btn-scale-asc-10" onclick="selectBtn(this.id)">10</button>
 
                             </div>
                         </div>
                     </div>
                     <fieldset class="row mb-3">
                         <legend class="col-form-label col-sm-8 pt-0"><b>2.Based on this meeting has your experience with ASI become?</b> </legend>
-                        <div class="col-sm-8">
+                        <div class="col-sm-8" onclick="event.preventDefault();">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
                                 <label class="form-check-label" for="gridRadios1">
@@ -212,7 +213,7 @@ Very low quality
 
                         </div>
                     </fieldset>
-                    <button type="submit" class="btn btn-primary" onclick="validate()">Save</button>
+                    <button type="submit" class="btn btn-primary" onclick="validate(), mandatory()">Save</button>
         </form>
         </div>
         <!--  Bootstrap Bundle with Popper -->
