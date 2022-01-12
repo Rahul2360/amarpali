@@ -11,19 +11,22 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <title>Happy vibes form</title>
+    <script src="happy.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="border border-dark my-3">
-    <h2 style="text-align: center;">Tell us something positive that happened to you today.</h2>
-    
-        <form>
-            
+    <br>
+    <div class="card" style="width: 60rem; margin: auto; border-color: black;">
+
+        <h2 style="text-align: center;">Tell us something positive that happened to you today.</h2>
+
+        <form onsubmit="return show()">
+
             <div class="center">
                 <div class="form-group row">
-                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right; margin-top: 5px;">Name</label>
-                    <input type="text" placeholder="Enter Your Name" class="col-sm-2 col-md-3">
+                    <label class="col-sm-2 col-md-4 col-form-label"
+                        style="text-align: right; margin-top: 5px;">Name</label>
+                    <input type="text" placeholder="Enter Your Name" class="col-sm-2 col-md-3" id="name">
                 </div>
 
                 <div class="form-group row">
@@ -33,7 +36,8 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">On a scale of 1-10, how
+                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">On a scale of 1-10,
+                        how
                         good was it?</label>
                     <input class="col-sm-2 col-md-3" type="text" placeholder="Enter a number betweet 1 and 10">
                 </div>
@@ -48,114 +52,116 @@
                     </select>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">At what time of day did
+                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">At what time of day
+                        did
                         it happen?</label>
 
-                    <div class="form-group">
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="radio" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Morning
-                                </label>
-                            </div>
+
+                    <div class="col-sm-2 col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Morning
+                            </label>
                         </div>
 
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="radio" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Afternoon
-                                </label>
-                            </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Afternoon
+                            </label>
                         </div>
 
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="radio" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Evening
-                                </label>
-                            </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                value="option3">
+                            <label class="form-check-label" for="exampleRadios3">
+                                Evening
+                            </label>
                         </div>
-                    </div>
-
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">What emotions did you
-                        experience?</label>
-
-                    <div class="form-group">
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Excited
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Humbled
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Elated
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Loved
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-check row">
-                            <div class="col-sm-2 col-md-3">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Enthusiastic
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="form-group row">
-                    <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">Please descrive your
-                        positive experience.</label>
-                        <div class="input-group col-md-3 col-sm-2">
-                            
-                            <textarea class="form-control" placeholder="Enter your experience here..."></textarea>
-                          </div>
-
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-md-9 col-sm-9 text-center">
-                        <input type="submit" class="btn btn-primary"
-                            style="background-color: rgb(0, 132, 255); color: aliceblue; margin-top: 5px;" value="Sign Up">
                     </div>
                 </div>
 
             </div>
-        </form>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">What emotions did you
+                    experience?</label>
+
+                <div class="col-sm-2 col-md-3">
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="select1">
+                        <label class="form-check-label" for="select1">
+                            Excited
+                        </label>
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="select2">
+                        <label class="form-check-label" for="select2">
+                            Humbled
+                        </label>
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="select3">
+                        <label class="form-check-label" for="select3">
+                            Elated
+                        </label>
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="select4">
+                        <label class="form-check-label" for="select4">
+                            Loved
+                        </label>
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="select5">
+                        <label class="form-check-label" for="select5">
+                            Enthusiastic
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-md-4 col-form-label" style="text-align: right;">Please descrive your
+                    positive experience.</label>
+                <div class="input-group col-md-3 col-sm-2">
+
+                    <textarea class="form-control" id="after" placeholder="Enter your experience here..."></textarea>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-9 col-sm-9 text-center">
+                    <input type="submit" class="btn btn-primary"
+                        style="background-color: rgb(0, 132, 255); color: aliceblue; margin-top: 5px;" value="Sign Up">
+                </div>
+            </div>
+
     </div>
+    </form>
+
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
