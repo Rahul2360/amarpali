@@ -20,18 +20,18 @@
     text-align: center;
     height: 57px;
 }
-.heading h1{
-    position: relative;
-    width: 380px;
-    height: 100px;
-    
-    display: inline-block;
+.heading p{
+    position:static;
+    font-size: 24px; 
+    margin: 0; 
+    display: block;
 }
 .bar{
-    position: absolute;
-    display: inline-block;
-    top: 7vh;
-    left: 4vw;
+    position:absolute;
+    display: block;
+    margin:0px 40%;
+    /* top: 7vh; */
+    /* left: 40vw; */
     background-color: rgb(84, 221, 49);
     width: 280px;
     height: 3px;
@@ -41,7 +41,7 @@
     left: 25vw;
     width: 48vw;
     padding-top: 5vh;
-    height: 88vh;
+    /* height: 88vh; */
     
     background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%, rgba(95,209,249,1) 100.2% , rgba(85,88,218,1) 0% );
 
@@ -56,20 +56,88 @@
 
     
 }  */
-p{
+.formcontainer p{
     font-size: 14px;
+    text-align: center;
 }
 .col-form-label{
     margin-left: 3px;
     height: 17px; 
     left: 100px;
 }
+
+@media (max-width: 925px) {
+    .col-form-label{
+        display: block;
+        height: 17px; 
+        width: 10vw;
+    }
+}
+@media (max-width: 925px) {
+    textarea{
+        
+         
+        max-width: 16vw;
+    }
+}
+
+/* @media (max-width: 890px){
+    .contain{
+        min-width: 70vw;
+    }
+} */
+@media (max-width: 890px){
+    .col-md-3{
+        min-width: 18%;
+        text-align: center;
+    }
+}
+@media (max-width: 890px){
+    .row{
+       margin: 0 auto; 
+    }
+}
+@media (max-width:1440px){
+
 .col-md-6{
     /* font-size: 13px; */
     text-align: right;
   
 }
+}
+@media (max-width:768px){
 
+    .col-md-6{
+        /* font-size: 13px; */
+        text-align: center;
+      
+    }
+    @media (max-width:909px){
+
+        .col-md-5{
+            /* font-size: 13px; */
+            text-align: center;
+          
+        }
+    }
+    @media (max-width:925px){
+
+        .col-md-1{
+             font-size: 6px; 
+            text-align: center;
+          
+        }
+    }
+    @media (max-width:768px){
+
+        .col-form-label{
+            position: relative;
+            /* font-size: 13px; */
+           margin-left:6%;
+          
+        }
+        }
+    
 .formcontainer{
     text-align: center;
 }
