@@ -57,11 +57,12 @@
     padding: 0;
 }
 
-.btn:hover{
-    background-color: blueviolet;
-}
-.btn:active{
+/* .btn:hover{
     background-color: rgb(12, 46, 2);
+} */
+.btn:checked{
+   
+    background-color: blueviolet;
 }
 .form-control{
         /* width: 23px; */
