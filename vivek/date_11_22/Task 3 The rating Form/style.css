@@ -58,12 +58,11 @@
 }
 
 /* .btn:hover{
-    background-color: rgb(12, 46, 2);
-} */
-.btn:checked{
-   
     background-color: blueviolet;
 }
+.btn:active{
+    background-color: rgb(12, 46, 2);
+} */
 .form-control{
         /* width: 23px; */
         margin-left: 3px;
@@ -91,3 +90,8 @@
         max-width: 62vw;
     }
 }
+
+  /* .button-group input[type="radio"]:checked+label{
+    background-color: #76cf9f;
+  } */
+  
