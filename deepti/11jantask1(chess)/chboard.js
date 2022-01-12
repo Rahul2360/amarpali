@@ -1,5 +1,6 @@
  var center = document.createElement('center');
  var ChessTable = document.createElement('table');
+ 
  for (var i = 0; i < 8; i++) {
      var tr = document.createElement('tr');
      for (var j = 0; j < 8; j++) {

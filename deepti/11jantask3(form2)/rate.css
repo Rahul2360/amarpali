@@ -1,16 +1,18 @@
-.box {
-    box-sizing: border-box;
-    border: 0px solid transparent;
-    background-clip: padding-box;
-}
-
 .col-12 {
     border: 1px solid;
 }
 
 .form-container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px;
+    margin: 4px;
+}
+
+.card {
+    width: 75rem;
+    margin: auto;
+    margin-top: 4px;
+}
+
+.btn-scale:hover {
+    border: 1px solid;
+    background-color: aquamarine;
 }
