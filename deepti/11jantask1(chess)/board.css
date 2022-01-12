@@ -3,31 +3,23 @@ h1 {
     color: coral;
 }
 
-.chessboard {
-    width: 515px;
-    height: 515px;
-    margin: 10px;
-    border: 10px solid rgba(51, 51, 51, 0.226);
+.cell {
+    height: 50px;
+    width: 50px;
+    border: 1.5px solid grey;
+    border-style: inset;
 }
 
 .black {
     float: left;
-    width: 60px;
-    height: 60px;
     background-color: rgb(153, 153, 153);
     font-size: 50px;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .white {
     float: left;
-    width: 60px;
-    height: 60px;
     background-color: #fff;
     font-size: 50px;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
 }

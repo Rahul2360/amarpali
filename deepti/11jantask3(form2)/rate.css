@@ -1,0 +1,9 @@
+.box {
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    background-clip: padding-box;
+}
+
+.col-12 {
+    border: 1px solid;
+}

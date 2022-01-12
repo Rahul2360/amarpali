@@ -6,13 +6,13 @@ td {
     padding: 10px;
 }
 
-tr td label {
-    text-align: right;
-}
-
 .formborder {
     width: 600px;
     height: 700px;
     margin: 10px;
     border: 10px solid rgba(169, 215, 233);
+}
+
+.button {
+    position: absolute;
 }
