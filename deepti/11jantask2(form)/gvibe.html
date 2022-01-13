@@ -16,121 +16,123 @@
     <div class="container mt-3" style="margin-left: 30%;">
         <h6>Tell us something positive that happened to you today.</h6>
     </div>
-    <div class="formborder" style="margin-left: 20%;">
+    <div class="formborder" style="margin: auto;">
         <form name="myForm">
-            <table>
-                <tr>
-                    <td>
+            <div class="table-responsive">
+                <table>
+                    <tr>
+                        <td>
 
-                        <label>Name</label>
-                    </td>
-                    <td>
-                        <input type="text" class="" id="username" name="username" placeholder="Enter your name">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Email Address</label>
-                    </td>
-                    <td>
-                        <input type="email" class="" id="email" name="email" placeholder="Enter your email address">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>On a scale of 1-10, how good was it? </label>
-                    </td>
-                    <td>
-                        <input type="integer" class="" id="scale" name="scale" placeholder="Enter a number between 1 and 10">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Where did it happen?</label></td>
-                    <td>
-                        <div class="dropdown me-1">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                            <label>Name</label>
+                        </td>
+                        <td>
+                            <input type="text" class="" id="username" name="username" placeholder="Enter your name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email Address</label>
+                        </td>
+                        <td>
+                            <input type="email" class="" id="email" name="email" placeholder="Enter your email address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>On a scale of 1-10, how good was it? </label>
+                        </td>
+                        <td>
+                            <input type="integer" class="" id="scale" name="scale" placeholder="Enter a number between 1 and 10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Where did it happen?</label></td>
+                        <td>
+                            <div class="dropdown me-1">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
                       Select
                     </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                                <li><a class="dropdown-item" href="#">At home</a></li>
-                                <li><a class="dropdown-item" href="#">At friend's home</a></li>
-                                <li><a class="dropdown-item" href="#">Somewhere else</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>At what time of day did it happen?</label></td>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                                    <li><a class="dropdown-item" href="#">At home</a></li>
+                                    <li><a class="dropdown-item" href="#">At friend's home</a></li>
+                                    <li><a class="dropdown-item" href="#">Somewhere else</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>At what time of day did it happen?</label></td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
                           Morning
                         </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
                           Afternoon
                         </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
                           Evening
                         </label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>What emotions did you experience?<br>(Select all that apply)</td>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>What emotions did you experience?<br>(Select all that apply)</td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
                             Excited
                         </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
                             Humbled
                         </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
                             Elated
                         </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
                             Loved
                         </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
                             Enthusiastic
                         </label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td text-align=right><label>Please describe your positive experience</label></td>
-                    <td>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your experience here..."></textarea>
-                        </div>
-                    </td>
-                </tr>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td text-align=right><label>Please describe your positive experience</label></td>
+                        <td>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your experience here..."></textarea>
+                            </div>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td></td>
-                    <td><button type="button" class="btn btn-primary" onclick="myfunction()" id="btn">Submit</button></td>
-                </tr>
-            </table>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary" onclick="myfunction()" id="btn">Submit</button></td>
+                    </tr>
+                </table>
+            </div>
 
         </form>
     </div>

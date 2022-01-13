@@ -12,7 +12,19 @@
     margin-top: 4px;
 }
 
-.btn-scale:hover {
-    border: 1px solid;
-    background-color: aquamarine;
+.radio-button input {
+    display: none;
+}
+
+.radio-button label {
+    display: inline-block;
+    background-color: #aaa2a2;
+    padding: 3px 11px;
+    font-family: Arial;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.radio-button input[type="radio"]:checked+label {
+    background-color: cadetblue;
 }
