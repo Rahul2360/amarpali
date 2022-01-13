@@ -33,7 +33,7 @@
 
     .center {
       position: relative;
-      left: 30%;
+      left: 25%;
       margin-top: 15px;
     }
   </style>
@@ -41,9 +41,10 @@
 </head>
 
 <body>
+  <div class="formborder" style="border:5px solid black; width: 40rem; margin: auto;">
   <h1>Sign Up</h1>
   <div class="underline"></div>
-  <form onsubmit="return Validate()">
+  <form onsubmit="return Validate()" >
     <div class="center">
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">User Name</label>
@@ -78,6 +79,7 @@
       </div>
     </div>
   </form>
+</div> 
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
