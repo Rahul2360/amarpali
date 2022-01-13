@@ -12,6 +12,23 @@
 
     <title>Survey</title>
 
+    <style>
+        .radio-button input {
+          display: none;
+        }      
+        .radio-button label {
+          display: inline-block;
+          background-color: #aaa2a2;
+          padding: 3px 11px;
+          font-family: Arial;
+          font-size: 12px;
+          cursor: pointer;
+        }      
+        .radio-button input[type="radio"]:checked+label {
+          background-color: #76cf9f;
+        }
+      </style>
+
     
 </head>
 
@@ -21,7 +38,7 @@
 
         <div class="row">
             <div class="col col-md-12 col-sm-12">
-                <form style="margin: 4px;" >
+                <form style="margin: 4px;" onclick="return false">
                     <h3>Rate My Service</h3>
                     <hr color="red">
                     <p>Plese help us by taking a few minutes to tell us about your ASI experience that you have received
@@ -44,20 +61,30 @@
 
                         <div class="row" style="margin-left: 1px;">
                             <div class="col-sm-12 col-md-12 col-form-label">
-                                <div required>
-                                    <div class="input-group-prepend" id="button-addon3">
-                                        <button class="btn btn-outline-secondary" type="button">1</button>
-                                        <button class="btn btn-outline-secondary" type="button">2</button>
-                                        <button class="btn btn-outline-secondary" type="button">3</button>
-                                        <button class="btn btn-outline-secondary" type="button">4</button>
-                                        <button class="btn btn-outline-secondary" type="button">5</button>
-                                        <button class="btn btn-outline-secondary" type="button">6</button>
-                                        <button class="btn btn-outline-secondary" type="button">7</button>
-                                        <button class="btn btn-outline-secondary" type="button">8</button>
-                                        <button class="btn btn-outline-secondary" type="button">9</button>
-                                        <button class="btn btn-outline-secondary" type="button">10</button>
-                                    </div>
-                                </div>
+                                
+                                    <div class="radio-button" id="rating" required>
+                                        <input type="radio" id="radio1" name="radios" value="1">
+                                        <label for="radio1">1</label>
+                                        <input type="radio" id="radio2" name="radios" value="2">
+                                        <label for="radio2">2</label>
+                                        <input type="radio" id="radio3" name="radios" value="3">
+                                        <label for="radio3">3</label>
+                                        <input type="radio" id="radio4" name="radios" value="4">
+                                        <label for="radio4">4</label>
+                                        <input type="radio" id="radio5" name="radios" value="5">
+                                        <label for="radio5">5</label>
+                                        <input type="radio" id="radio6" name="radios" value="6">
+                                        <label for="radio6">6</label>
+                                        <input type="radio" id="radio7" name="radios" value="7">
+                                        <label for="radio7">7</label>
+                                        <input type="radio" id="radio8" name="radios" value="8">
+                                        <label for="radio8">8</label>
+                                        <input type="radio" id="radio9" name="radios" value="9">
+                                        <label for="radio9">9</label>
+                                        <input type="radio" id="radio10" name="radios" value="10">
+                                        <label for="radio10">10</label>
+                                      </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -72,7 +99,7 @@
 
 
                         <div class="row" style="margin-left: 1px;">
-                            <div class="col-sm-12 col-md-12 col-form-label">
+                            <div class="col-sm-12 col-md-12 col-form-label" id="experience">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="exampleRadios"
                                         id="exampleRadios1" value="option1">
@@ -109,7 +136,7 @@
 
 
                         <div class="row" style="margin-left: 1px;">
-                            <div class="col-sm-12 col-md-12 col-form-label">
+                            <div class="col-sm-12 col-md-12 col-form-label" id="manner">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="exampleRadios"
                                         id="exampleRadios1" value="option1">
@@ -161,7 +188,7 @@
 
 
                         <div class="row" style="margin-left: 1px;">
-                            <div class="col-sm-12 col-md-12 col-form-label">
+                            <div class="col-sm-12 col-md-12 col-form-label" id="trainer">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="exampleRadios"
                                         id="exampleRadios1" value="option1">
@@ -213,7 +240,7 @@
 
 
                         <div class="row" style="margin-left: 1px;">
-                            <div class="col-sm-12 col-md-12 col-form-label">
+                            <div class="col-sm-12 col-md-12 col-form-label" id="quality">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="exampleRadios"
                                         id="exampleRadios1" value="option1">
@@ -265,7 +292,7 @@
                         </div>
                         <br>
                         <div class="row">
-                            <textarea name="msg" rows="5" cols="15" style="margin: auto;"
+                            <textarea name="msg" id="big_text" rows="5" cols="15" style="margin: auto;"
                                 class="col-sm-11 col-md-11 col-form-lebel"></textarea>
 
                         </div>
@@ -282,22 +309,22 @@
 
                         <div class="row" style="margin-left: 1px;">
                             <label class="col-sm-2 col-md-4 col-form-label">Name</label>
-                            <input type="text" class="col-sm-2 col-md-3" >
+                            <input type="text" id="name" class="col-sm-2 col-md-3" >
                         </div>
                         <br>
                         <div class="row" style="margin-left: 1px;">
                             <label class="col-sm-2 col-md-4 col-form-label">Company*</label>
-                            <input type="text" class="col-sm-2 col-md-3" required>
+                            <input type="text" id="company" class="col-sm-2 col-md-3" required>
                         </div>
                         <br>
                         <div class="row" style="margin-left: 1px;">
                             <label class="col-sm-2 col-md-4 col-form-label">City/Town</label>
-                            <input type="text" class="col-sm-2 col-md-3" >
+                            <input type="text" id="city" class="col-sm-2 col-md-3" >
                         </div>
                         <br>
                         <div class="row" style="margin-left: 1px;">
                             <label class="col-sm-2 col-md-4 col-form-label">State/Province</label>
-                            <input type="text" class="col-sm-2 col-md-3" >
+                            <input type="text" id="state" class="col-sm-2 col-md-3" >
                         </div>
                         <br>
                         <div class="row" style="margin-left: 1px;">
@@ -307,7 +334,7 @@
                         <br>
                         <div class="row" style="margin-left: 1px;">
                             <label class="col-sm-2 col-md-4 col-form-label">Phone Number</label>
-                            <input type="text" class="col-sm-2 col-md-3" >
+                            <input type="text" id="number" class="col-sm-2 col-md-3" >
                         </div>
                         <br>
                     </div>
@@ -318,7 +345,8 @@
                         <div class="row" style="margin-top: 1cm; margin-bottom: 1cm; ">
                             <div class="col-sm-12 col-md-12">
                                 <div style="text-align: right; margin-right: 1px;">
-                                    <button type="submit" class="btn btn-danger" >Save</button>
+                                    <button onclick="show_hide()" class="btn btn-danger" >Show/Hide</button>
+                                    <input type="submit" style="background-color: red; color: aliceblue;" value="Save">
                                 </div>
                             </div>
                         </div>
