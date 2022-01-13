@@ -104,11 +104,13 @@
                             <div class="col-sm-12 col-md-12 col-form-label" id="experience">
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                        id="exampleRadios1" value="option1">
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        Better
-                                    </label>
+                                    <div class="q1">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Better
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="exampleRadios"
@@ -314,7 +316,7 @@
                         </div>
 
                         <div class="row" style="margin-left: 1px;">
-                            <label class="col-sm-2 col-md-4 col-form-label">Name</label>
+                            <label class="col-sm-2 col-md-4 col-form-label" id="namel">Name</label>
                             <input type="text" id="name" class="col-sm-2 col-md-3">
                         </div>
                         <br>
@@ -345,21 +347,25 @@
                         <br>
                     </div>
 
+
                     <div class="card" style="margin: auto;">
 
 
                         <div class="row" style="margin-top: 1cm; margin-bottom: 1cm; ">
                             <div class="col-sm-12 col-md-12">
                                 <div style="text-align: right; margin-right: 1px;">
-                                    
-                                    <input type="submit" style="background-color: red; color: aliceblue;" value="Save">
+                                    <button type="button" onclick="show_hide()"
+                                        class="btn btn-danger">Show/Hide</button>
+                                    <button type="button" onclick="display_console()"
+                                        class="btn btn-danger">save</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </form>
-                <button type="button" onclick="show_hide()" class="btn btn-danger">Show/Hide</button>
+
+
+
             </div>
 
         </div>
