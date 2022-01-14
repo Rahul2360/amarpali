@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <style>
+          .table-bordered td,th{
+            border-color:black !important;
+}
+      </style>
+     
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Pokemon table</title>
+  </head>
+  <body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+          <li class="breadcrumb-item text-dark"><a href="#" class="text-dark"><b>Home</b></a></li>
+          <li class="breadcrumb-item"><a href="#"class="text-dark"><b>Record</b></a></li>
+          <li class="breadcrumb-item"><a href="#"class="text-dark"><b>Pokemon</b></a></li>
+          <li class="breadcrumb-item " aria-current="page"class="text-dark"><b>Data</b></a></li>
+        </ol>
+      </nav>
+      <div class="container">
+        <div class=".table-responsive{-sm|-md|-lg|-xl}">
+
+      <table class="table table-bordered table-hover" id="mytab">
+        <thead>
+          <tr>
+            <th scope="col">S.No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type 1</th>
+            <th scope="col">Type 2</th>
+            <th scope="col">HP</th>
+            <th scope="col">Attack</th>
+            <th scope="col" >Defense</th>
+            <th scope="col">Level</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <th scope="row">1</th>
+            <td class="text-primary font-weight-bold">Bulbasaur</td>
+            <td>Grass</td>
+            <td class="text-right">Poison</td>
+            <td>45</td>
+            <td>49</td>
+            <td class="text-center">49</td>
+            <td>1</td>
+            <td class="total"></td>
+          </tr>
+          <tr>       
+            <th scope="row">2</th>
+            <td class="text-primary font-weight-bold">Charmander</td>
+            <td colspan="2"> Fire</td>
+            <td> 39</td>
+            <td>52</td>
+            <td class="text-center"><u>43</u></td>
+            <td>1</td>
+            <td class="total"><u></u></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td class="text-success font-weight-bold">Squirtle</td>
+            <td >Water</td>
+            <td></td>
+            <td> 44</td>
+            <td>48</td>
+            <td class="text-center">65</td>
+            <td>1</td>
+            <td class="total"></td>
+          </tr>
+          <tr>            
+            <th scope="row">4</th>
+            <td class="text-success font-weight-bold"> Butterfree</td>
+            <td> Bug</td>
+            <td class="text-right">Flying</td>
+            <td rowspan="2">60</td>
+            <td>45</td>
+            <td class="text-center">50</td>
+            <td rowspan="2"><b>2</b></td>
+            <td class="total"></td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td class="text-danger font-weight-bold">Raichu</td>
+            <td>Electric</td>
+            <td class="text-right" ><strike>Water</strike></td>
+            <td>55</td>
+            <td class="text-center">55</td>
+            <td class="total"></td>
+          </tr>
+          <tr>       
+            <th scope="row">6</th>
+            <td class="text-danger font-weight-bold">Mewto</td>
+            <td>Psychic</td>
+            <td class="text-right"><strike>Poison</strike></td>
+            <td>106</td>
+            <td>110</td>
+            <td class="text-center">90</td>
+            <td>1</td>
+            <td class="total"></td>
+          </tr>
+          <tr>         
+            <th scope="row">7</th>
+            <td class="text-dark font-weight-bold">Dragonite</td>
+            <td>Dragon</td>
+            <td class="text-right">Flying</td>
+            <td>91</td>
+            <td><u>106</u></td>
+            <td class="text-center">95</td>
+            <td>1</td>
+            <td class="total"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="data">  </p>
+    </div>
+    </div>
+    
+  </body>
+  <script>
+      var sum=0;
+    var rowdata= document.getElementById("mytab");
+    var data=document.getElementById("data");
+    // console.log(rowdata);
+    for (let i = 1; i<mytab.rows.length; i++) {
+        var celldata=mytab.rows.item(i).cells;
+        for (let j = 1; j <celldata.length; j++) {
+            data.innerHTML = data.innerHTML + "    " + celldata.item(j).innerHTML;
+            }
+            data.innerHTML = data.innerHTML + '<br />';
+        
+    }
+    for (let i = 1; i<mytab.rows.length; i++) {
+        var celldata=mytab.rows.item(i).cells;
+        // console.log(celldata)
+        for (let j = 4; j <(celldata.length)-2; j++) {
+            sum=sum+parseInt((celldata.item(j).innerHTML))
+                // sum=sum+(celldata.item(j).innerHTML);
+                // console.log|(sum);
+            }
+            document.getElementsByClassName("total").innerHTML=sum;
+           sum=0; 
+    }
+</script>
+</html>
