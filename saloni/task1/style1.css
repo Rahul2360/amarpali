@@ -1,17 +1,17 @@
 * {box-sizing: border-box}
 
 
-  input[type=text], input[type=password] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
-  background: lightgrey;
+  border: border-box;
+  background: none;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: white;
+  background-color:white;
   outline: none;
 }
 
@@ -42,7 +42,7 @@ button:hover {
 }
 
 
- 
+
 @media screen and (max-width: 300px) {
   .signupbtn {
     width: 100%;

@@ -1,17 +1,17 @@
 
-	.table table-bordered border-primary {
-  border: 1px solid black;
-  border-color: black;
-  text-align: left;}
+.table table-bordered border-primary {
+	border: 1px solid black;
+	border-color: black;
+	text-align: left;}
 
- 
-  tr:hover {background-color: yellow;}
-            
+	
+	tr:hover {background-color: yellow;}
+	
 
-  th {
-  background-color: white;
-  color: black;
-}
-table td:hover {
-    background-color: blue;
-}
+	th {
+		background-color: white;
+		color: black;
+	}
+	table td:hover {
+		background-color: blue;
+	}
