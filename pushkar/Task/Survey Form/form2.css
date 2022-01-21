@@ -16,3 +16,33 @@ border-top: 2px solid red;
 .btn:hover{
     background-color: lightslategray;
 }
+.btnmod:focus{
+    background-color: coral !important;
+} 
+ .btn input[type="radio"]:checked+label {
+    background-color: #76cf9f;
+}
+
+.radio-button input {
+    display: none;
+  
+}
+.radio-button label:focus{
+    background-color: red
+
+}
+
+.radio-button label {
+    display: inline-block;
+    background-color: #aaa2a2;
+    padding: 3px 11px;
+    font-family: Arial;
+    font-size: 12px;
+    cursor: pointer;
+    border: 2px solid black;
+    
+}
+
+.radio-button input[type="radio"]:checked+label {
+    background-color: #76cf9f;
+}
