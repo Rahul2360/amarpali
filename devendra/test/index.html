@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp</title>
+</head>
+
+<body>
+    <form action="" id="details">
+        Name:- <input type="text" id="firstName"><br>
+        Roll:- <input type="text" id="lastName"><br>
+        <p>Plz select option</p>
+        <input type="radio" name="JTP" id="summer" value="summer">Summer<br>
+        <input type="radio" name="JTP" id="winter" value="winter">Winter<br>
+        <input type="radio" name="JTP" id="rainy" value="rainy">Rainy<br>
+        <input type="radio" name="JTP" id="autumn" value="autumn">Autumn<br>
+        <input type="submit">
+    </form>
+</body>
+<script>
+    const formDetails = document.getElementById("details");
+    formDetails.addEventListener("submit", async (ev) => {
+        ev.preventDefault();
+        var fName = document.getElementById("firstName").value;
+        var lName = document.getElementById("lastName").value;
+        var value1 = document.getElementById("summer").checked
+        var value2 = document.getElementById("winter").checked
+        var value3 = document.getElementById("rainy").checked
+        var value4 = document.getElementById("autumn").checked
+        console.log(fName);
+        console.log(lName);
+
+
+
+        if (value1 == true) {
+            var selectedValue1 = document.getElementById('summer').value;
+            console.log(selectedValue1);
+        }
+        else if (value2 == true) {
+            var selectedValue2 = document.getElementById('winter').value;
+            console.log(selectedValue2);
+        }
+        else if (value3 == true) {
+            var selectedValue3 = document.getElementById('autumn').value;
+            console.log(selectedValue3);
+        }
+        else if (value4 == true) {
+            var selectedValue4 = document.getElementById('autumn').value;
+            console.log(selectedValue4);
+        }
+        else {
+            alert("Select Value")
+        }
+
+
+    })
+</script>
+
+</html>
