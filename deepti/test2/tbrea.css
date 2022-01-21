@@ -1,0 +1,11 @@
+td:first-child {
+    font-weight: bold;
+}
+
+td:nth-child(4) {
+    text-align: end;
+}
+
+td:nth-child(7) {
+    text-align: center;
+}

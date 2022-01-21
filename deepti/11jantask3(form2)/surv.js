@@ -1,12 +1,3 @@
-function selectBtn() {
-    var sel = document.getElementById('DIVbtns').getElementsByTagName('div');
-    for (var i = 0; i < sel.length; i++) {
-        sel[i].style.backgroundColor = "yellow";
-    }
-    document.getElementById().style.backgroundColor = 'aqua';
-}
-console.log(sel);
-
 function mandatory() {
     var a = document.getElementsByName("compname")[0].value;
     if (a == "") {
@@ -58,12 +49,35 @@ function show_hide() {
 }
 
 
-var form = document.getElementsById('form')
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault() //prevents autosubmitting
-    var scale = document.getElementsByClassName('chart-scale').value
-    console.log(scale)
-    var expe = document.getElementById("result").value
-    console.log(expe)
-})
+function new_function() {
+    var form = document.getElementById('form')
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault() //prevents autosubmitting
+        var scale = document.getElementById("name").value
+        console.log(scale)
+        var company = document.getElementById("company").value
+        console.log(company)
+        var state = document.getElementById("state").value
+        console.log(state)
+        var city = document.getElementById("city").value
+        console.log(city)
+        var number = document.getElementById("number").value
+        console.log(number)
+        var email = document.getElementById("email").value
+        console.log(email)
+        var big_text = document.getElementById("big_text").value
+        console.log(big_text)
+        var quality = document.getElementById("quality").value
+        console.log(quality)
+        var trainer = document.getElementById("trainer").value
+        console.log(trainer)
+        var manner = document.getElementById("manner").value
+        console.log(manner)
+        var experience = document.getElementById("experience").value
+        console.log(experience)
+        var rating = document.getElementById("rating").value
+        console.log(rating)
+    })
+}
