@@ -35,12 +35,12 @@ function divide() {
 function stu_name() {
     let roll = document.getElementById("roll").value;
     let names = ['Ashish', 'Aman', 'Balwant', 'Bhagwati', 'bhupendra', 'Deepti', 'Devendra', 'Himanshu', 'kartik', 'Kirti'];
-    for (let i = 0; i < names.length; i++)
+    for (let i = 0; i < names.length; i++) {
         if (i == (roll - 1)) {
             document.getElementById("Name").innerHTML = names[i];
         }
+    }
 }
-
 function marks() {
     var roll = document.getElementById("roll").value;
     var myobj = {
@@ -68,3 +68,11 @@ function date_time() {
     let show = hour + ':' + min + ':' + sec
     document.getElementById('time').innerHTML = show + " on date " + dates;
 }
+
+//string methods
+var str = "My name is devendra singh negi";
+console.log(str);
+var str2 = str.slice(6,15);
+console.log(str2);
+console.log(str.replace("devendra" , "dev"));
+console.log(str.toUpperCase());
