@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array</title>
+</head>
+<body>
+    <h1>JavaScript Array :-</h1>
+    <pre>
+        An array is an object that can store multiple values at once. 
+        ex:- const words = ['hello', 'world', 'welcome'];
+        in js we can store different types of values in array
+       Note:- array with mixed data types
+        const newData = ['work', 'exercise', 1, true];
+        Note :- You can also store function inside of array
+        Push and Pop Method use to add and remove elem in array which i already done in first example.
+    </pre>
+</body>
+</html>
+<script>
+    // decleration of array
+    const marks=[60,65,78,71,,50];
+    marks.forEach(function(element){
+       console.log(`Your Value of array is ${element}`);
+      })
+    //   Second Method of dec array
+    const array2 = new Array("eat", "sleep");
+    for(let i=0; i<array2.length; i++){
+        console.log(`Value of aray is ${array2[i]}`);
+    }
+    // This is Empty array
+   
+    const emptyArray = [ ];
+
+    // array with mixed data types
+    const newData = ['work', 'exercise', 1, true];
+    for(let i=0; i<newData.length; i++){
+        console.log(`Value of aray is ${newData[i]}`);
+    }
+
+</script>
