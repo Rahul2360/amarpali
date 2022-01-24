@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+         <!-- My  CSS -->
+         <link rel="stylesheet" href="form2.css">
+         <!--Bootstrap  -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js">
+         </script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js">
+         </script>
+        
+</head>
+<body>
+    <div class="container" style="padding: 20px;" >
+        <div class="heading">
+            <h3>Rate My Service</h3>
+            <hr class="col">
+        </div>
+        <form action="" id="details" >
+          <label class="para">Please help us by taking a few minutes to tell us about your ASI experience that you have recived from the team during meeting  </label>
+        <div class="card-header" > 
+            <p>1. How did ASI perform on a scale form 1 -10 at the meeting? *</p> 
+            <p>0-5 being poor 6-7 being average 8-10 being excilent</p>
+            <!-- experiment -->
+            <!-- <div class="btn-group mr-2"  role="group" aria-label="First group" id="myDIV 12" >
+              <button type="button" class="btnmod btn btn-white" id="myButton1" name="value" value="1">1</button>
+              <button type="button" class="btnmod btn btn-white" id="myButton2" name="value" value="2"> 2</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton3" name="value" value="3">3</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton4" name="value" value="4">4</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton5" name="value" value="5">5</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton6" name="value" value="6">6</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton7" name="value" value="7">7</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton8" name="value" value="8">8</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton9" name="value" value="9">9</button>
+              <button type="radio" class="btnmod btn btn-white" id="myButton10" name="value" value="10">10</button>
+            </div> -->
+            <!-- end -->
+            <div class="radio-button" id="rating" required>
+              <input type="radio" id="radio1" name="radios" value="1">
+              <label for="radio1">1</label>
+              <input type="radio" id="radio2" name="radios" value="2">
+              <label for="radio2">2</label>
+              <input type="radio" id="radio3" name="radios" value="3">
+              <label for="radio3">3</label>
+              <input type="radio" id="radio4" name="radios" value="4">
+              <label for="radio4">4</label>
+              <input type="radio" id="radio5" name="radios" value="5">
+              <label for="radio5">5</label>
+              <input type="radio" id="radio6" name="radios" value="6">
+              <label for="radio6">6</label>
+              <input type="radio" id="radio7" name="radios" value="7">
+              <label for="radio7">7</label>
+              <input type="radio" id="radio8" name="radios" value="8">
+              <label for="radio8">8</label>
+              <input type="radio" id="radio9" name="radios" value="9">
+              <label for="radio9">9</label>
+              <input type="radio" id="radio10" name="radios" value="10">
+              <label for="radio10">10</label>
+          </div>
+
+        </div>
+        
+            <label class="para">2. Based on this meeting has your experience with ASI beocme?</label>
+            <div id="myDIV 11">
+            <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="2a" value="Better">
+                <label class="form-check-label" for="inlineRadio1">  Better</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="2b" value="Remained the same">
+                <label class="form-check-label" for="inlineRadio1">  Remained the same</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="2c" value="Worse">
+                <label class="form-check-label" for="inlineRadio1">  Worse</label>
+              </div>
+        </div>
+        <div class="card-header" style="margin-top: 20px;" id="myDIV 10">
+            <label>3. Does the ASI team response to your enquires in a timely manner ?</label> 
+            <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="3a" value=" Strongly agree">
+                <label class="form-check-label" for="inlineRadio1">  Strongly agree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="3b" value="Agree">
+                <label class="form-check-label" for="inlineRadio1">  Agree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="3c" value="Neigther agree nor disagree">
+                <label class="form-check-label" for="inlineRadio1">  Neigther agree nor disagree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="3d" value=" Disagree">
+                <label class="form-check-label" for="inlineRadio1"> Disagree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="3e" value="Strongly disagree">
+                <label class="form-check-label" for="inlineRadio1"> Strongly disagree</label>
+              </div>
+        </div>
+        
+            <label class="para">4. was the ASI repersentative well trend and knowledgeable ?</label> 
+            <div id="myDIV 9">
+            <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="4a" value=" Strongly agree">
+                <label class="form-check-label" for="inlineRadio1">  Strongly agree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="4b" value="Agree">
+                <label class="form-check-label" for="inlineRadio1">  Agree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="4c" value=" Neigther agree nor disagree">
+                <label class="form-check-label" for="inlineRadio1">  Neigther agree nor disagree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="4d" value="Disagree">
+                <label class="form-check-label" for="inlineRadio1"> Disagree</label>
+              </div>
+              <div class="form-check form" style="margin-left: 25px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="4e" value="Strongly disagree">
+                <label class="form-check-label" for="inlineRadio1"> Strongly disagree</label>
+              </div>
+        </div>
+        <div class="card-header" style="margin-top: 20px;">
+            <label>5. How would rate the quality of the content(repoert/presentation/planner/project) prsented at the meeting ?</label> 
+         
+              <div id ="myDIV 8">
+                <div class="form-check form" style="margin-left: 25px;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="5a" value="Very high quality">
+                  <label class="form-check-label" for="inlineRadio1">  Very high quality</label>
+                </div>
+                <div class="form-check form" style="margin-left: 25px;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="5b" value="High quality">
+                  <label class="form-check-label" for="inlineRadio1">  High quality</label>
+                </div>
+                <div class="form-check form" style="margin-left: 25px;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="5c" value="Neigther high nor low quality">
+                  <label class="form-check-label" for="inlineRadio1">  Neigther high nor low quality</label>
+                </div>
+                <div class="form-check form" style="margin-left: 25px;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="5d" value="Low quality">
+                  <label class="form-check-label" for="inlineRadio1">Low quality</label>
+                </div>
+                <div class="form-check form" style="margin-left: 25px;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="5e" value="Very low quality">
+                  <label class="form-check-label" for="inlineRadio1">Very low quality</label>
+                </div>
+              </div>
+        </div>
+        <label class="para">6. Please share any additinal comment worth meaning</label>
+        <div class="card">
+            <textarea name="" id="myDIV 7" cols="30" rows="4"></textarea>
+        </div>
+        <div class="card-header" style="margin-top: 20px;">
+            <label>7. Contact Info (Should we need to contact you) *</label> 
+            <div class="form-group row">
+                <label for="Username" class="col-sm-4 col-form-label">Name</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="myDIV 6" >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="Username" class="col-sm-4 col-form-label">Company</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="myDIV 5"  >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="Username" class="col-sm-4 col-form-label">City/Town</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="myDIV 4" >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="Username" class="col-sm-4 col-form-label">State/Province</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="myDIV 3" >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="Username" class="col-sm-4 col-form-label" >Email Address</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="myDIV 2">
+                </div>
+              </div>
+              <div class="form-group row" >
+                <label for="Username" class="col-sm-4 col-form-label" >Phone Number</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control " id="myDIV 1">
+                </div>
+              </div>
+              <div class="text-right">
+                <button class="btn btn-success" value="submit" onclick="getValue()" style="width: 100px; height: 40px; font-size:18px; font-weight: bolder; background-color: brown;">Save</button>
+              </div>
+        </div>
+        </form>
+        <!-- <div class="text-left"> -->
+          <button class="btn btn-success" value="submit" onclick="showHide()" style="width: 100px; height: 40px; font-size:10px; font-weight: bolder;">Show/Hide</button>
+        <!-- </div> -->
+    </div>
+    <script>
+      //  I can replace it from querySelect All and for loop
+  // document.querySelector('#myButton1').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton2').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton3').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton4').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton5').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton6').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton7').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton8').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton9').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  // document.querySelector('#myButton10').addEventListener('click', function(event) {
+  // event.preventDefault();});
+  function showHide(){
+    var x = document.getElementById("myDIV 1");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+  var x1 = document.getElementById("myDIV 2");
+  if (x1.style.display === "none") {
+    x1.style.display = "flex";
+  } else {
+    x1.style.display = "none";
+  }
+  var x2 = document.getElementById("myDIV 3");
+  if (x2.style.display === "none") {
+    x2.style.display = "flex";
+  } else {
+    x2.style.display = "none";
+  }
+  var x3 = document.getElementById("myDIV 4");
+  if (x3.style.display === "none") {
+    x3.style.display = "flex";
+  } else {
+    x3.style.display = "none";
+  }
+  var x5 = document.getElementById("myDIV 5");
+  if (x5.style.display === "none") {
+    x5.style.display = "flex";
+  } else {
+    x5.style.display = "none";
+  }
+  var x6 = document.getElementById("myDIV 6");
+  if (x6.style.display === "none") {
+    x6.style.display = "flex";
+  } else {
+    x6.style.display = "none";
+  }
+  var x7 = document.getElementById("myDIV 7");
+  if (x7.style.display === "none") {
+    x7.style.display = "flex";
+  } else {
+    x7.style.display = "none";
+  }
+
+  var x8 = document.getElementById("myDIV 8");
+  if (x8.style.display === "none") {
+    x8.style.display = "block";
+  } else {
+    x8.style.display = "none";
+  }
+  var x9 = document.getElementById("myDIV 9");
+  if (x9.style.display === "none") {
+    x9.style.display = "block";
+  } else {
+    x9.style.display = "none";
+  }
+  var x10 = document.getElementById("myDIV 10");
+  if (x10.style.display === "none") {
+    x10.style.display = "block";
+  } else {
+    x10.style.display = "none";
+  }
+  var x11 = document.getElementById("myDIV 11");
+  if (x11.style.display === "none") {
+    x11.style.display = "block";
+  } else {
+    x11.style.display = "none";
+  }
+  var x12 = document.getElementById("rating");
+  if (x12.style.display === "none") {
+    x12.style.display = "block";
+  } else {
+    x12.style.display = "none";
+  }
+  }
+  // Value find in console
+  function getValue(){
+    const formDetails = document.getElementById("details");
+    formDetails.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+     // For 1 Question Answer
+      var ans1a=document.getElementById("radio1").checked;
+      var ans1b=document.getElementById("radio2").checked;
+      var ans1c=document.getElementById("radio3").checked;
+      var ans1d=document.getElementById("radio4").checked;
+      var ans1e=document.getElementById("radio5").checked;
+      var ans1f=document.getElementById("radio6").checked;
+      var ans1g=document.getElementById("radio7").checked;
+      var ans1h=document.getElementById("radio8").checked;
+      var ans1i=document.getElementById("radio9").checked;
+      var ans1j=document.getElementById("radio10").checked;
+       // For 1 Question Answer End*/
+
+
+      // For 2 Question Answer
+       
+      var ans2a=document.getElementById("2a").checked;
+      var ans2b=document.getElementById("2b").checked;
+      var ans2c=document.getElementById("2c").checked;
+      // For 2 Question Answer END
+
+        // For 3 Question Answer
+      var ans3a=document.getElementById("3a").checked;
+      var ans3b=document.getElementById("3b").checked;
+      var ans3c=document.getElementById("3c").checked;
+      var ans3d=document.getElementById("3d").checked;
+      var ans3e=document.getElementById("3e").checked;
+
+      // For 3 Question Answer End
+
+       //For 4 Question Answer
+      var ans4a=document.getElementById("4a").checked;
+      var ans4b=document.getElementById("4b").checked;
+      var ans4c=document.getElementById("4c").checked;
+      var ans4d=document.getElementById("4d").checked;
+      var ans4e=document.getElementById("4e").checked;
+       //For 4 Question Answer END
+
+      // For 5 Question Answer
+      var ans5a=document.getElementById("5a").checked;
+      var ans5b=document.getElementById("5b").checked;
+      var ans5c=document.getElementById("5c").checked;
+      var ans5d=document.getElementById("5d").checked;
+      var ans5e=document.getElementById("5e").checked;
+      // For 5 Question Answer END
+
+      // For 6 Question Answer 
+       var com =document.getElementById('myDIV 7').value
+
+      //For 6 Question Answer END
+      
+      //For 7 Question Answer END 
+       var Name = document.getElementById("myDIV 6").value;
+       var Company = document.getElementById("myDIV 5").value;
+       var City = document.getElementById("myDIV 4").value;
+       var State = document.getElementById("myDIV 3").value;
+       var Emailid = document.getElementById("myDIV 2").value;
+       var Phone = document.getElementById("myDIV 1").value;
+     //For 7 Question Answer END 
+    
+     // handling1
+
+     if(ans1a==true){
+        var value1a = document.getElementById('radio1').value;  
+        console.log(value1a);
+      }
+      else if(ans1b==true){
+        var value1b = document.getElementById('radio2').value;  
+        console.log(value1b);
+
+      }
+      else if(ans1c==true){
+        var value1c = document.getElementById('radio3').value;  
+        console.log(value1c);
+
+      }
+      else if(ans1d==true){
+        var value1d = document.getElementById('radio4').value;  
+        console.log(value1d);
+
+      }
+      else if(ans1e==true){
+        var value1e = document.getElementById('radio5').value;  
+        console.log(value1e);
+
+      }
+      else if(ans1f==true){
+        var value1f = document.getElementById('radio6').value;  
+        console.log(value1f);
+
+      }
+      else if(ans1g==true){
+        var value1g = document.getElementById('radio7').value;  
+        console.log(value1g);
+
+      }
+      else if(ans1h==true){
+        var value1h = document.getElementById('radio8').value;  
+        console.log(value1h);
+
+      }
+      else if(ans1i==true){
+        var value1i = document.getElementById('radio9').value;  
+        console.log(value1i);
+
+      }
+      else if(ans1j==true){
+        var value1j = document.getElementById('radio10').value;  
+        console.log(value1j);
+
+      }
+
+      // handling2
+
+      if(ans2a==true){
+        var value2a = document.getElementById('2a').value;  
+        console.log(value2a);
+      }
+      else if(ans2b==true){
+        var value2b = document.getElementById('2b').value;  
+        console.log(value2b);
+      }
+      else if(ans2c==true){
+        var value2c = document.getElementById('2c').value;  
+        console.log(value2c);
+      }      
+      // handling 3
+       if(ans3a==true){
+        var value3a = document.getElementById('3a').value;  
+        console.log(value3a);
+      }
+      else if(ans3b==true){
+        var value3b = document.getElementById('3b').value;  
+        console.log(value3b);
+      }
+      else if(ans3c==true){
+        var value3c = document.getElementById('3c').value;  
+        console.log(value3c);
+      }
+      else if(ans3d==true){
+        var value3d = document.getElementById('3d').value;  
+        console.log(value3d);
+      }
+      else if(ans3e==true){
+        var value3e = document.getElementById('3e').value;  
+        console.log(value3e);
+      }
+
+     // Handling 4
+     if(ans4a==true){
+        var value4a = document.getElementById('4a').value;  
+        console.log(value4a);
+      }
+      else if(ans4b==true){
+        var value4b = document.getElementById('4b').value;  
+        console.log(value4b);
+      }
+      else if(ans4c==true){
+        var value4c = document.getElementById('4c').value;  
+        console.log(value4c);
+      }
+      else if(ans4d==true){
+        var value4d = document.getElementById('4d').value;  
+        console.log(value4d);
+      }
+      else if(ans4e==true){
+        var value5e = document.getElementById('4e').value;  
+        console.log(value5e);
+      }
+
+      // handling 5
+        if(ans5a==true){
+        var value5a = document.getElementById('5a').value;  
+        console.log(value5a);
+      }
+      else if(ans5b==true){
+        var value5b = document.getElementById('5b').value;  
+        console.log(value5b);
+      }
+      else if(ans5c==true){
+        var value5c = document.getElementById('5c').value;  
+        console.log(value5c);
+      }
+      else if(ans5d==true){
+        var value4d = document.getElementById('5d').value;  
+        console.log(value4d);
+      }
+      else if(ans5e==true){
+        var value5e = document.getElementById('5e').value;  
+        console.log(value5e);
+      }
+
+      
+      
+    // handling 6
+          console.log(com)
+
+
+    // handling 7
+    console.log(Name);
+    console.log(Company);
+    console.log(City);
+    console.log(State);
+    console.log(Emailid);
+    console.log(Phone);
+    })
+   }//END function
+    </script>
+</body>
+</html>

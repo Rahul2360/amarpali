@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion </title>
+</head>
+<body>
+    <h1>Type conversion</h1>
+    <pre>
+        to convert string into no:-
+        Number("string");
+        work only
+        Number("3.14")-------->    returns 3.14
+        Number(" ")------------>        returns 0
+        Number("")-------------->        returns 0
+        Number("99 88")---------->    returns NaN
+        parseFloat()-------------->       Parses a string and returns a floating point number
+        parseInt()---------------->     Parses a string and returns an integer
+        String------------------------> to convert string
+        toString()---------------------> 
+    </pre>
+    <h2>Arithmatic Operator</h2>
+</body>
+<script>
+let x=10;
+let y=String(10);
+console.log(x);//voiet nuber 
+console.log(y);//white color string
+y=x.toString();//to string to convert object into string
+console.log(y);
+x=" "
+y=Number(x);
+console.log(y);
+x=Number("99 88");
+console.log(x);
+x="10";
+y=+x;
+console.log(y);
+x="998";
+y=parseFloat(x);
+console.log(y);
+
+
+let num1=10; // assign the value 10 to num1 Assigmentt Operator
+let num2=20; //// assign the value 20 to num2
+console.log(num1+num2);//+ operator
+console.log(num1-num2);//minus  operator
+console.log(num1*num2);//Multipliacation
+console.log(num2/num1);//	Division
+console.log(num1%num2); //Modulus operator
+let ex=10**2
+console.log(ex);
+</script>
+</html>

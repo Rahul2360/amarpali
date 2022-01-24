@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DataType</title>
+</head>
+<body>
+    <h1>data Types in JavaScript are as:- <br>
+    </h1>
+    <pre>
+    1):-Number Type
+    2):-Boolena
+    3):-String
+    4):-Null
+    5):-Object
+    6):- Undefiend
+    </pre>
+    <pre>
+        1):-String is used to store text. In JavaScript, strings are surrounded by quotes
+        2):-Number represents integer and floating numbers (decimals and exponentials). For example 10,20.22
+        3):-Boolean is data type represents logical entities. Boolean represents one of two values: true or false. It is easier to think of it as a yes/no switch. For example, true false
+        4):-In JavaScript, null is a special value that represents empty or unknown value.
+        5):-An object is a complex data type that allows us to store collections of data.
+        6):-The undefined data type represents value that is not assigned. If a variable is declared but the value is not assigned, then the value of that variable will be undefined.
+    </pre>
+</body>
+<script>
+    // Number data Type 
+    //consist integer float value
+    let slary=20000.2;
+    console.log(`Your slary is ${slary} whose data type is `+typeof(slary));
+    
+    slary=200;
+    console.log(`Your slary is ${slary} whose data type is `+typeof(slary));
+
+//String data Type
+    let name="Pushkar";
+    console.log(`Your name is ${name} whose data type is `+typeof(name));
+
+    name='Vivek Suyal';
+    console.log(`Your name is ${name} whose data type is `+typeof(name));
+
+    //Boolean data Type
+    let value=true;
+    console.log(`Your vlue of boolean is ${value} whose data type is `+typeof(value));
+    value=false;
+    console.log(`Your vlue of boolean is ${value} whose data type is `+typeof(value));
+
+    //Undefiend when we not initialz variable
+
+    let un;
+    console.log(`Your vlue of un is ${un} whose data type is `+typeof(un));
+
+//object
+
+let student = { };
+console.log(`Your vlue of object is ${student} whose data type is `+typeof(student));
+
+//null
+//Defien not provide any ref
+let a = null;
+onsole.log(`Your vlue of a= is ${a} whose data type is `+typeof(a));
+
+</script>
+</html>
