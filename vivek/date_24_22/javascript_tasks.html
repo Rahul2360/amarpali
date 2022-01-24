@@ -262,24 +262,24 @@ console.log( typeof date);
     let l = 1, n = 5;
     while (l <= n) {
     console.log(l);
-    l += 1;
+    l += 1;}
 
     //do...while loop
     let m = 1;
-    let n =3;
+    let num =3;
     do {
     console.log(m);
     m++;
-    } while(m <= n);
-    }
+    } while(m <= num);
+    
 
 }
 {
     //Functions
-    let add=function(a, b) {
-    return a + b;
+    let add=function(a,b) {
+    console.log(a+b);
     }
-    console.log(add(4,3));
+    add(4,3);
     //Output: 7
 
     //Returning a value
@@ -373,6 +373,18 @@ console.log( typeof date);
     };
     console.log(user['name']); //or use user.name
     console.log(user['age']);
+}
+{
+    //Date formatting 
+    let today = new Date();
+    console.log(today);
+    //date methods
+    //let todaydate = today.toLocaleDateString();//only date
+    let hour = today.getHours();
+    let min = today.getMinutes();
+    let sec = today.getSeconds();
+    let timeis = hour + ':' + min + ':' + sec
+    console.log(timeis);
 }
     </script>
 </body>
