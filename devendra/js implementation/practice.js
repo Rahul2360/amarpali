@@ -1,5 +1,3 @@
-var num1 = parseInt(document.getElementById("num1").value);
-var num2 = parseInt(document.getElementById("num2").value);
 
 function add() {
     var num1 = parseInt(document.getElementById("num1").value);
@@ -61,3 +59,12 @@ function marks() {
     document.getElementById("mark").innerHTML = myobj[roll];
 }
 
+function date_time() {
+    let date = new Date();
+    let dates = date.toLocaleDateString();
+    let hour = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+    let show = hour + ':' + min + ':' + sec
+    document.getElementById('time').innerHTML = show + " on date " + dates;
+}
