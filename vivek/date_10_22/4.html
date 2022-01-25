@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style4.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Form</title>
+  </head>
+  <body>
+    
+        <div class="contain">
+            <div class="heading">
+            <h1>Signup</h1>
+            <div class="signbor"></div>
+            </div>
+            <form  >
+                <div class="formcont">
+                <div class=" form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-2 col-form-label"  >Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" required>
+                  </div>
+                </div>
+                <div class=" form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="psswd" value="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label" >confirm Password</label>
+                    
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="conpass" value="">
+                      <span id="massege" value=""></span>
+                    </div>
+                  </div>
+                </div>
+                <div class=" formspl">
+                    <div class="forcheck">
+                      <div class="box">
+                        <input type="checkbox" id="tick" value="" >
+                        <span  class="col-sm-2 col-form-label">I accept the <a href="#">terms of use</a>  & <a href="#"> Privacy Policy</a></span>
+                        <label id="mass" value=""></label>
+                      </div>
+                      <div class="btn">
+                        <button type="submit" id="btn" value="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    
+              </form>
+              
+        </div>
+        <script>
+          const cb = document.getElementById("tick");
+          var btn= document.querySelector('#btn')
+          btn.addEventListener('click',(event)=>{
+            if((cb.checked)!=true){
+              document.getElementById("mass").innerHTML="*--check the checkbox please--*"
+            }
+            if((cb.checked)!=false)
+            {
+              document.getElementById("mass").innerHTML=""
+            }
+            var pass = document.getElementById("psswd").value;
+          var conpass = document.getElementById("conpass").value;
+          if(pass!=conpass){
+            document.getElementById("massege").style.color="#dc143c";
+              document.getElementById("massege").innerHTML="*--Wrong pass--*";
+              
+          }
+         if(pass==""){
+           document.getElementById("massege").style.color="#dc143c";
+            document.getElementById("massege").innerHTML="*--Password must not be empty--*";
+            return false;
+          }
+          if(pass.length<8){
+            document.getElementById("massege").style.color="#dc143c";
+            document.getElementById("massege").innerHTML="*--Password must Contain atleast 8 character--*";
+            r
+          }
+          if(pass==conpass){
+            
+            document.getElementById("massege").style.color="#00FF00";
+            document.getElementById("massege").innerHTML="*--Welcome To Our Page--*" +""|+pass +""|+conpass;
+            
+        }
+          });
+        
+        </script>
+   
+  </body>
+</html>

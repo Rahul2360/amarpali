@@ -1,0 +1,103 @@
+*{  
+    margin: 0px;
+    padding: 0px;
+    background-color: floralwhite;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+
+.contain{
+    /* overflow-y: hidden; */
+    position: absolute;
+    /* border: solid black 3px;
+    background-color: rgb(248, 245, 245); */
+    /* margin-top: 72px;
+    margin-left: 29%; */
+    top: 5rem;
+    left: 21rem;
+    width: 39rem;
+    height: 36rem;
+    box-shadow: grey -5px 6px 18px 0px;
+}
+/* .sign{
+    position:absolute;
+   
+} */
+.signbor{
+    position:absolute;
+    margin: 5px auto; 
+    width: 8rem; 
+    height: 0.3rem; 
+    background-color: cyan;
+} 
+.heading{
+    margin: 18px auto;
+    width: 147px;
+    height: 80px;
+    /* border: solid cyan 3px;
+    background-color: rgb(248, 245, 245); */
+
+}
+.formcont{
+    position: absolute;
+    
+    width: 90%;
+    left: 17px;
+}
+.formcont div{
+    margin-bottom: 15px;
+}
+.formcont input{
+    position: relative;
+    margin-left: 30px;
+    width: 85%;
+}
+.formcont .col-sm-2{
+    width: 16%;
+}
+.formspl {
+    position: absolute;
+    /* background-color: darkgreen; */
+    top:72%;
+    left: 20%;
+    
+}
+.formspl span{
+    width: 110%;
+}
+.btn{
+    margin-left: 38px;
+    margin-top: 20px;
+    width: 15rem;
+}
+#massege{
+    position: relative;
+    font-size: 18px;
+    left: 4rem;
+    color: crimson;
+}
+@media only screen and (max-width: 599px) {
+   *{
+      /* background-color: lightblue; */
+    }
+    .contain{
+        height: 56rem;
+    }
+    .formcont  input{
+       top:1rem;
+       left: 30%;
+       width: 50%;
+    }
+    .formcont label{
+        position: relative;
+        left: 50%;
+    }
+}
+#mass{
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    left: 1rem;
+    color: crimson;
+}

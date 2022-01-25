@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js tasks</title>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        // Variables in js
+        // var, let, const
+        var name = `vivek's`;//can use backtick if we want to use ' inverted comma between the srting
+        var about;
+        var marks = 3444;
+        marks = 0;
+        about = 'A programmer'
+        console.log(name, about, marks);
+        // Rules for creating JavaScript Variables
+        /*
+        1. Cannot start with numbers
+        2. Can start with letter, numbers, _ or $
+        3. Are case sensitive
+        */
+        var city = 'nainital';
+        console.log(city);
+
+        const ownersName = 'Hari Ram';
+        // ownersName = 'vivek'; // Cannot do this (error)
+        console.log(ownersName);
+        const fruit = 'Orange';
+
+        { //making a diffrent block
+            let city = 'Rampur';
+            city = 'Kolkata';
+            console.log(city); //kolkata
+        }
+        console.log(city); //nainital
+
+
+        const arr1 = [12, 23, 12, 53, 3];
+        arr1.push(45);
+        console.log(arr1)
+
+        /* Most common programming case types:
+        
+        1. camelCase  //personal fav like gebi
+        2. kebab-case
+        3. snake_case 
+        4. PascalCase 
+        
+        
+        */
+        {
+            // Primitive data types
+
+            // String
+            let name = "vivek";
+            console.log("My string is " + name);
+            console.log("Data type is " + (typeof name));
+
+            // Numbers
+            let marks = 34.4;
+            console.log("Data type is " + (typeof marks));
+
+            // Boolean
+            let isDriver = true;
+            console.log("Data type is " + (typeof isDriver));
+
+            // Null
+            let nullVar = null;
+            console.log("Data type is " + (typeof nullVar)); //it tells it is an object but it is primitive
+
+            // Undefined
+            let undef = undefined;
+            console.log("Data type is " + (typeof undef));
+
+            // Reference Data Types
+
+            // Arrays
+            let myarr = [1, 2, 3, 4, false, "string"];
+            console.log("Data type is " + (typeof myarr));
+
+            // Object Literals
+            let stMarks = {
+                vivek: 89, //cant put space in keys
+                Shubham: 36,
+                Rohan: 34
+            }
+            console.log(typeof stMarks);
+
+            function findName() {
+
+            }
+            console.log(typeof findName);
+
+            let date = new Date();
+            console.log(typeof date);
+
+
+        }
+        {
+            //Operators in javascript
+
+            let num1 = 2; //2,9 are operands
+            let num2 = 9;
+            // unary operators in action in JavaScript
+            console.log("The value of num1 in negative is" + (-num1)); //single operand
+            // binary operators in action in JavaScript
+            console.log("The value of 444+765 in negative is" + (444 + 765)); //two operand
+
+            // Arithmetic operators in action in JavaScript
+            console.log("The value of num1 + num2 is " + (num1 + num2));
+            console.log("The value of num1 - num2 is " + (num1 - num2));
+            console.log("The value of num1 * num2 is " + (num1 * num2));
+            console.log("The value of num1 / num2 is " + (num1 / num2));
+            console.log("The value of num1 ** num2 is " + (num1 ** num2)); //exponent ES16
+            console.log("The value of num1++ is " + (num1++));
+            console.log("The value of ++num1 is " + (++num1));
+            console.log("The value of num1-- is " + (num1--));
+            console.log("The value of --num1 is " + (--num1));
+
+            //Assignment Operators
+            //Operator    Example      SameAs
+            // =	    x = y	    x = y
+            // +=       x += y	    x = x + y
+            // -=	    x -= y	    x = x - y
+            // *=	    x *= y	    x = x * y
+            ///=	    x /= y	    x = x / y
+            // %=	    x %=y	    x = x % y
+            // <<=	    x <<= y	    x = x << y
+            // >>=	    x >>= y	    x = x >> y
+            // >>>=	    x >>>= y    x = x >>> y
+            // &=	    x &= y	    x = x & y
+            // ^=	    x ^= y	    x = x ^ y
+            // |=	    x |= y	    x = x | y
+            // **=	    x **= y	    x = x ** y
+        }
+        {
+            //Type conversion
+
+            //Boolean Conversion
+            let res;
+            res = Boolean(1); // true
+            console.log(res);
+            res = Boolean(0); // false
+            console.log(res);
+            res = Boolean("hello"); // true
+            console.log(res);
+            res = Boolean(""); // false
+            console.log(res);
+
+            //String Conversion
+            let strcon
+            let a = 90
+            strcon = String(a) // returns a string from a number variable a
+            console.log(strcon);
+            console.log(a); //tosring
+
+            // parseInt and parseFloat
+            console.log(parseInt('$100 dollars')); // NaN
+            console.log(parseInt('+10.25990 kg')); // 10
+            console.log(parseFloat(' +10.25 kg')); // 10.25
+            console.log(parseFloat('ABC')); //NaN
+
+            //Implicit Conversion
+            //Conversion To String
+            let impcon;
+            impcon = '3' + 4;
+            console.log(impcon) // "34"
+            impcon = '9' + true;
+            console.log(impcon); // "9true"
+            impcon = '0' + null;
+            console.log(impcon); // "0null"
+
+            //Conversion To Number
+            let impcontonum
+            impcontonum = '4' - '4';
+            console.log(impcontonum); // 0
+            impcontonum = '4' * 5;
+            console.log(impcontonum); // 20
+
+            //Boolean Conversion to Number
+            let impconbintonum;
+            impconbintonum = '5' - true;
+            console.log(impconbintonum); // 4
+            impconbintonum = 10 + false;
+            console.log(impconbintonum); // 10
+
+            //note :- In JavaScript, Null is considered as 0 when used with numbers. 
+            //Arithmetic operation of undefined with number, boolean or null returns NaN
+        }
+
+        { // Conditional
+            //Conditions     Meaning
+            /* a == b      a is equal to b  
+               a != b      a is not equal to b
+               a < b       a is less than b 
+               a> b        a is greater than b 
+               a <= b      a is less than or equal to b  
+               a >= b      a is greater than or equal to b
+               a===b       a has the same value and same type as b */
+
+            //if statement
+            if (5 > 0) {
+                console.log("5 is greater than 0");
+            }
+            if (5 < 0) {
+                console.log("5 is less than 0");
+            }
+
+            //if else statement
+            let salary = 500;
+            if (salary > 1000) {
+                console.log("My Salary is greater than 1000");
+            } else {
+                console.log("My Salary is less than or equal to 1000");
+            }
+
+            //else if condition
+            let sal = 500;
+            if (sal > 1000) {
+                console.log("My Salary is greater than 1000");
+            }
+            else if (sal < 1000) {
+                console.log("My Salary is less than 1000");
+            } else {
+                console.log("My Salary equal to 1000");
+            }
+
+            //if else shortcut: ternary operator
+            5 > 0 ? console.log("Greater") : console.log("Smaller");
+
+        }
+        {
+            //Loops
+            //for Loop
+            for (let i = 1; i <= 5; i++) {
+                console.log(i);
+            }
+
+            //for… in Loop
+            // An object with some properties 
+            let person = { name: "Harry", language: "JavaScript", age: 20 };
+            // Loop through all the properties in the object  
+            for (let j in person) {
+                console.log(j + " = " + person[j]);
+            }
+
+            //forEach Loop
+            const alpha = ['a', 'b', 'c'];
+            for (let k = 0; k < alpha.length; k++) {
+                console.log(alpha[k]);
+            }
+
+            //while loop
+            let l = 1, n = 5;
+            while (l <= n) {
+                console.log(l);
+                l += 1;
+            }
+
+            //do...while loop
+            let m = 1;
+            let num = 3;
+            do {
+                console.log(m);
+                m++;
+            } while (m <= num);
+
+
+        }
+        {
+            //Functions
+            let add = function (a, b) {
+                console.log(a + b);
+            }
+            add(4, 3);
+            //Output: 7
+
+            //Returning a value
+            function get_Distance(speed, time) {
+                let dist = speed * time;
+                return dist;
+            }
+            let myDistance = get_Distance(8, 5);
+            console.log("distance is" + " " + myDistance);
+            //note:-  In JavaScript, if no return value is specified, the function will return undefined .
+        }
+
+        {
+            //String Formatting
+            let simple = `name is vivek`;
+            // let firstName = 'The special', This is an example of Template literal
+            // lastName = 'my';         
+            // let greeting = `Welcome to ${firstName} ${lastName}`;
+            console.log(simple);
+
+            //JavaScript String Methods
+
+            //charAt(any value)
+            let myString = 'JavaScript!!!';
+            console.log(myString.charAt(7));
+            //output: i
+
+            //concat(p1, p2)
+            let str1 = "JavaScript"
+            let str2 = str1.concat(" is", "awesome")
+            console.log(str2);
+            //Output: JavaScript is awesome
+
+            //slice(start, end)
+            let text = "programming"
+            let mystr = text.slice(0, 4)
+            console.log(mystr)
+            //Output:- "prog"
+
+            //search(“str”)
+            let str = "Welcome to programming World!!";
+            let pos = str.search("programming");
+            console.log(pos);
+            //Output:- 11
+
+            //substr() 
+            let st = "Apple, Banana, Kiwi";
+            let res = st.substr(7, 6);
+            console.log(res);
+            // Output: Banana
+
+
+        }
+        {
+            //Arrays in JavaScript
+            let arr = new Array();
+            arr = ['first element', 'second element', 'last element']; //or simply place let,var or const
+            console.log(arr[0]) // output ' first element'
+            console.log(arr[1]) //  output ' second element'
+            console.log(arr[arr.length - 1]) //  output ' last element'
+            //Array methods
+
+            //sort()
+            let age = [33, 55, 67, 18];
+            //  age.sort(age)
+            //18,33,55,67
+
+            // reverse()
+            let rev = age.reverse(age)
+            console.log(rev);
+            //18,67,55,33
+
+            //push()
+            age.push(45)
+            console.log(age);
+            //pop()
+            age.pop(); //last element
+            console.log(age);
+            // shift()
+            age.shift(); //first element
+            console.log(age);
+
+
+            //JavaScript Object
+            let user = new Object(); // "object constructor" syntax
+            user = { //or simply place let,var or const
+                name: "Vivek", // by key "name" store value "Harry"
+                age: 25, // by key "age" store value 25
+                language: "JavaScript" // by key "language" store value “ JavaScript”
+                //we can also add function in any object
+            };
+            console.log(user['name']); //or use user.name
+            console.log(user['age']);
+        }
+        {
+            //Date formatting 
+            let today = new Date();
+            console.log(today);
+            //date methods
+            //let todaydate = today.toLocaleDateString();//only date
+            let hour = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds();
+            let timeis = hour + ':' + min + ':' + sec
+            console.log(timeis);
+        }
+    </script>
+</body>
+
+</html>

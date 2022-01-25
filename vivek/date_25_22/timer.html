@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body{
+            background-color: blue;
+        }
+         .container {
+            height: 100vh;
+            display: flex;
+            background-color: aqua;
+            align-items: center;
+            justify-content: center;
+        }
+        .contain{
+            background-color: rgb(17, 38, 82);
+            height: 50vh;
+            width: 25vw;
+            border-radius: 50%;
+            box-shadow: 0px 3px 9px 8px rgb(138, 136, 135);
+        }
+        .time{
+            /* position: relative; */
+            margin: 100px 12px 56px 69px;
+           color: cyan;
+           font-size: 28px;
+           
+        }
+        .logs{
+            background-color: rgb(17, 38, 82);
+            margin-left: 5%;
+            height: 55vh;
+            width: 25vw;
+            border-radius: 5%;
+            box-shadow: 0px 3px 9px 8px rgb(218, 217, 217);
+            padding:24px 0px 15px 5px;
+        }
+        ul{
+            color: cyan;
+           list-style: none;
+           padding:0px 14px 0px 8px;
+        }
+        li{
+            border: 2px solid rgb(0, 225, 255);
+            border-radius: 40px;
+            margin-top: 11px;
+            padding:8px 11px 8px 11px;
+            
+        }
+        #clear{
+            background-color: yellow;
+        }
+        @media (max-width:968px){
+            .contain{
+                height: 50vh;
+                width: 39vw;
+            }
+            @media (max-width:968px){
+            .logs{
+                height: 55vh;
+                width: 39vw;
+                margin-left: 12%;
+            }
+        }
+    </style>
+     <link rel="stylesheet"  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+        <div class="contain">
+            <div class="time" id="timer">
+            <span id="hr">00 :</span>
+            <span id="min">00 :</span>
+            <span id="sec">00 :</span>
+            <span id="mili">00 </span>
+        </div>
+        <div class="buttons d-flex justify-content-center text-center">
+            
+            <button class="btn bg-success rounded-circle ml-2" onclick="pause()" id="pause" ><i class="far fa-pause" style="font-size: 36px;" ></i></button>
+            <button class="btn bg-success rounded-circle ml-2 " onclick="start()" id="start" ><i class="far  fa-play" style="font-size: 36px;" ></i></button>
+            <button class="btn bg-success rounded-circle ml-2" onclick="reset()" id="reset" ><i class="far fa-power-off" style="font-size: 36px;" ></i></button>
+
+        </div>
+        </div>
+        </div>
+            <div class="col-6">
+        
+        <div class=" logs text-center">
+            <div class="row">
+                <div class="col-4">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" style="position: relative; width: 100px;">
+                </div>
+                </div>
+              <button class="btn bg-warning rounded-pill ml-2" onclick="clearAll()" id="clear" ><i class="far fa-soap" style="font-size: 21px;" >Clear All</i></button>
+        </div>
+    </div>
+</div>
+    </div>
+    <script>
+        var hours=document.getElementById("hr");
+        var minutes=document.getElementById("min");
+        var sec=document.getElementById("sec");
+        var mili=document.getElementById("mili");
+        var lap=document.getElementById("lap");
+        var btn=document.getElementById("clear");
+        var date = new Date('04-10-1998 00:00:00:00');
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        var miliSecond = date.getMilliseconds();
+        var timeFlag = 0;
+        var count=0;
+        var cnt=0;
+        btn.style.visibility="hidden";
+        document.getElementById("pause").style.visibility="hidden";
+        document.getElementById("reset").style.visibility="hidden";
+        
+        
+    </script>
+   
+  </body>
+</html>
