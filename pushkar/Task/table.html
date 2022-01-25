@@ -4,64 +4,246 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <title>Table</title>
 </head>
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-crossorigin="anonymous"></script>
-<!-- End Bootstrap Link -->
-<!-- Font Awsome Button -->
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<style>
+    tr:hover{background-color: wheat;}
+</style>
 <body>
-    <h1 align="center">This is a Table</h1>
-    <table border="4px solid black" align="center" width="560px">
-        <tr>
-            <th>Company</th>
-            <th>Model</th>
-        </tr>
-        <tr>
-            <td>Dudge</td>
-            <td>Challenger</td>
-        </tr>
-        <tr>
-            <td>Maruti</td>
-            <td>Swift</td>
-        </tr>
-        <tr>
-            <td>Jeep</td>
-            <td>Wrangle</td>
-        </tr>
-        <tr >
-            <td colspan="2">All these car Company and their models names are collected from the internet.You can change Comapny and model name as per Choice. </td>
-           
-        </tr>
-       
-        
-        <tr>
-            
-            <td>BMW</td>
-            <td>BMW 5 Series</td>
-        </tr>
-       <style>
-            td:hover {background-color: yellow;}
-            th:hover {background-color: yellow;}
-            th{background-color:red;}
-            td:active {background-color: rgb(255, 51, 0);}
-            th:active {background-color: rgb(255, 51, 0);}
-            table{
-                margin-top: 10%;
-            }
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">survived</th>
+            <th scope="col">pclass</th>
+            <th scope="col">sex</th>
+            <th scope="col">age</th>
+            <th scope="col">sibsp</th>
+            <th scope="col">parch</th>
+            <th scope="col">fare</th>
+            <th scope="col">embarked</th>
+            <th scope="col">class</th>
+            <th scope="col">who</th>
+            <th scope="col">adult_male</th>
+            <th scope="col">deck</th>
+            <th scope="col">embark_town</th>
+            <th scope="col">alive</th>
+            <th scope="col">alone</th>
 
-       </style>
-    </table>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">0</th>
+            <td>0</td>
+            <td>3</td>
+            <td>male</td>
+            <td>22.0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>7.2500</td>
+            <td>S</td>
+            <td>Third</td>
+            <td>man</td>
+            <td>True</td>
+            <td>Nan</td>
+            <td>Southamption</td>
+            <td>No</td>
+            <td>False</td>
+
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>1</td>
+            <td>1</td>
+            <td>female</td>
+            <td>38.0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>71.2833</td>
+            <td>C</td>
+            <td>First</td>
+            <td>woman</td>
+            <td>False</td>
+            <td>C</td>
+            <td>cherbourg</td>
+            <td>yes</td>
+            <td>False</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>1</td>
+            <td>3</td>
+            <td>female</td>
+            <td>26.0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>7.9250</td>
+            <td>S</td>
+            <td>Third</td>
+            <td>woman</td>
+            <td>False</td>
+            <td>NaN</td>
+            <td>Southamption</td>
+            <td>yes</td>
+            <td>True</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>female</td>
+            <td>35.0</td>
+            <td>1</td>
+            <td>53.1000</td>
+            <td>S</td>
+            <td>First</td>
+            <td>woman</td>
+            <td>False</td>
+            <td>C</td>
+            <td>Southamption</td>
+            <td>yes</td>
+            <td>False</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>0</td>
+            <td>3</td>
+            <td>male</td>
+            <td>35.0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>8,0500</td>
+            <td>S</td>
+            <td>Third</td>
+            <td>man</td>
+            <td>True</td>
+            <td>NaN</td>
+            <td>Southamption</td>
+            <td>no</td>
+            <td>True</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>0</td>
+            <td>3</td>
+            <td>male</td>
+            <td>NaN</td>
+            <td>0</td>
+            <td>0</td>
+            <td>8.4583</td>
+            <td>Q</td>
+            <td>Third</td>
+            <td>man</td>
+            <td>True</td>
+            <td>NaN</td>
+            <td>Queenstown</td>
+            <td>no</td>
+            <td>True</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>0</td>
+            <td>1</td>
+            <td>male</td>
+            <td>54.0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>51.8625</td>
+            <td>S</td>
+            <td>First</td>
+            <td>man</td>
+            <td>True</td>
+            <td>E</td>
+            <td>Southamption</td>
+            <td>no</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>0</td>
+            <td>male</td>
+            <td>2.0</td>
+            <td>3</td>
+            <td>1</td>
+            <td>21.0750</td>
+            <td>S</td>
+            <td>Third</td>
+            <td>child</td>
+            <td>False</td>
+            <td>NaN</td>
+            <td>Southamption</td>
+            <td>yes</td>
+            <td>False</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>1</td>
+            <td>3</td>
+            <td>female</td>
+            <td>27.0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>11.1333</td>
+            <td>S</td>
+            <td>Third</td>
+            <td>woman</td>
+            <td>False</td>
+            <td>NaN</td>
+            <td>Southamption</td>
+            <td>yes</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>1</td>
+            <td>2</td>
+            <td>female</td>
+            <td>14.0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>30.0708</td>
+            <td>C</td>
+            <td>Second</td>
+            <td>child</td>
+            <td>False</td>
+            <td>NaN</td>
+            <td>cherbourg</td>
+            <td>yes</td>
+            <td>False</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>1</td>
+            <td>3</td>
+            <td>female</td>
+            <td>4.0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>16.7000</td>
+            <td>S</td>
+            <td>Third</td>
+            <td>child</td>
+            <td>False</td>
+            <td>G</td>
+            <td>Southamption</td>
+            <td>yes</td>
+            <td>False</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      
+      <table class="table">
+        <thead class="thead-light">
+         
+      </table>
+    
 </body>
 </html>
