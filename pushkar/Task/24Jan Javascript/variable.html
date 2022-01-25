@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable JavaScript</title>
+</head>
+<body>
+    <h1>Variable Conecept in JavaScript</h1>
+    <h6>There are three type of variable in JavaScript :- </h6>
+    <h6>
+        1):- Var <br>
+        2):- Let <br>
+        3):-Const</h6>
+</body>
+<script>
+    // let scope is function type not global
+
+    let x=10;
+    console.log(`Value of x=${x}`);
+    
+//const is use when we not require to change our value
+
+const y=40;
+console.log(`value of y=${y}`);
+
+// if i override y so it give a error which is Uncaught TypeError: Assignment to constant variable.
+ //   at variable.html:66:2 
+// y=200;
+//console.log(y);
+
+//Let us consider a array
+ const a=[10,20,30,40];
+
+ a.forEach(element => {
+    console.log(`value of array a = ${element}`);
+ });
+ //But if i push element
+a.push(100);
+a.forEach(element => {
+    console.log(`value of array a = ${element}`);
+ });
+ //but here i can change array by adding elemet
+
+
+ //If i did these type of tings then show eroor
+ //variable.html:85 Uncaught TypeError: Assignment to constant variable.
+// at variable.html:85:3
+//(anonymous) @ variable.html:85
+// a=[20,20,40,50,100];
+ a.forEach(element => {
+    console.log(`value of array a = ${element}`);
+ });
+
+// Now come to the var
+
+// var is global type variable
+// not preffible inside function in function we preffer let type variable
+//bcz it scope is only function type if redeclrare in another function age 
+//then no erroer in let case
+//but in var case the var due to its scope 
+//its provide error
+var name="Pushkar"
+
+
+ function Name(){
+    let name="Vivek"//give high priority to let inside function
+     console.log(`My Name is ${name}`);
+ }
+ Name()
+ //but outside function no scope of let
+ console.log(`Value of name is ${name}`);
+</script>
+</html>
