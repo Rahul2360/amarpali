@@ -152,5 +152,12 @@ document.write(cars.drivedetails(), "<br>");
 /*Date formatting */
 var now = new Date();
 document.write(now, "<br>");
-var gotodate = new Date(2019, 8, 22, 10, 33, 30, 0);
+var gotodate = new Date(2019, 1, 22, 10, 33, 30, 0);
 document.write(gotodate, "<br>");
+var showdate = new Date("October 28 2005 7:30:15");
+document.write(showdate, "<br>");
+var now = new Date("2018");
+document.write(now, "<br>");
+/*String*/
+let myString = 'JavaScriptBasics';
+console.log(myString.charAt(7));
