@@ -32,6 +32,7 @@ function pause() {
 
 function reset() {
     check = 0;
+
     document.getElementById("pause").style.visibility = 'hidden';
     document.getElementById("reset").style.visibility = 'hidden';
     document.getElementById("start").style.visibility = 'visible';
@@ -40,6 +41,8 @@ function reset() {
     sec = 0;
     milisec = 0;
     document.getElementById("time").innerHTML = display_time;
+
+
 }
 
 
@@ -65,4 +68,22 @@ function stopwatch() {
         document.getElementById("time").innerHTML = display_stopwatch;
         setTimeout("stopwatch()", 10)
     }
+}
+
+function lap() {
+    count = 0;
+    if (count < 5) {
+        const li = document.createElement("li");
+        const number = document.createElement("span");
+        const timestamp = document.createElement("span");
+
+
+        timestamp.innerHTML = ` &nbsp &nbsp ${hr} : ${min} : ${sec} : ${milisec}`;
+        count = count + 1;
+        number.innerHTML = `#` + count;
+        lap.appendChild(li);
+        li.appendChild(number);
+        li.appendChild(timestamp);
+    }
+
 }

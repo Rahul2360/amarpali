@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
-    <link rel="stylesheet" href="stopwatchstyle.css">
+    <title>Timer</title>
+    <link rel="stylesheet" href="timer.css">
 </head>
 
 <body>
     <div class="container">
         <div id="time">
+            <label class="col-1 col-form-label">Hour</label>
+            <input type="number" id="hour" max="99" min="0" value="0">
+            <label class="col-1 col-form-label mx-3">Minute</label>
+            <input type="number" id="minute" max="60" min="0" value="0">
+            <label class="col-1 col-form-label mx-3">Second</label>
+            <input type="number" id="second" max="60" min="0" value="0">
         </div>
     </div>
     <div class="buttons">
@@ -21,13 +27,8 @@
             <i class="fas fa-ban"></i> Stop</button>
         <button class="button" id="reset" type="button" onclick="reset()">
             <i class="fas fa-power-off"></i> Reset</button>
-        <button class="button " id="lap" type="button" onclick="lap()">
-            <i class="fas fa-power-off"></i> Lap</button>
     </div>
-    <ul class="laps">
-
-    </ul>
-    <script src="watch.js"></script>
+    <srcipt src="timer.js"></srcipt>
 </body>
 
 </html>

@@ -29,23 +29,3 @@ body {
 .digit {
     font-size: 30px;
 }
-
-.lap {
-    height: 250px;
-    position: relative;
-    padding: 30px 0;
-}
-
-.lap-item {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    border-radius: 50px;
-    margin-bottom: 25px;
-}
-
-.timestamp {
-    display: inline-block;
-    margin-left: 25px;
-}
