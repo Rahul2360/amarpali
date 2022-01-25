@@ -12,21 +12,23 @@
 <body>
     <div class="container">
         <div id="time">
-            <span class="digit" id="hr">00</span>
-            <span class="digit" id="min">00</span>
-            <span class="digit" id="sec">00</span>
-            <span class="digit" id="millisec">000</span>
+            <!--<span class="digit" id="hr">00 : </span>
+            <span class="digit" id="min">00 : </span>
+            <span class="digit" id="sec">00 : </span>
+            <span class="digit" id="millisec">000</span>-->
 
 
         </div>
     </div>
     <div class="buttons">
-        <button class="btn btn-primary " id="start" type="button" onclick="start()"><i
-            class="fas fa-play"></i> start</button>
-        <button class="btn btn-primary " id="pause" type="button" onclick="pause()"><i
-            class="fas fa-ban"></i> stop</button>
-        <button class="btn btn-primary " id="reset" type="button" onclick="reset()"><i
-            class="fas fa-power-off"></i> reset</button>
+        <button class="button" id="start" type="button" onclick="start()">
+            <i class="fas fa-play"></i> Start</button>
+        <button class="button " id="pause" type="button" onclick="pause()">
+            <i class="fas fa-ban"></i> Stop</button>
+        <button class="button" id="reset" type="button" onclick="reset()">
+            <i class="fas fa-power-off"></i> Reset</button>
+        <button class="button " id="lap" type="button" onclick="lap()">
+            <i class="fas fa-power-off"></i> Lap</button>
 
 
     </div>

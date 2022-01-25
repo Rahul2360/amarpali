@@ -9,11 +9,22 @@ body {
 }
 
 .buttons {
-    padding: 40px 50px;
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 35px;
     font-size: 18px;
+    border-radius: 50%;
 }
 
 .buttons :hover {
     cursor: pointer;
     background-color: aquamarine;
+}
+
+.digit {
+    font-size: 30px;
 }

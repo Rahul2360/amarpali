@@ -1,42 +1,55 @@
-var hr = 0;
-var min = 0;
-var sec = 0;
-var millisec = 0;
-var timer = false;
+var date = new Date(2018, 6, 5, 00, 00, 00, 00);
+var hr = date.getHours();
+var min = date.getMinutes();
+var sec = date.getSeconds();
+var milisec = date.getMilliseconds();
+var display_time = hr + " : " + min + " : " + sec + " : " + milisec;
+document.getElementById("time").innerHTML = display_time;
 
+var check = 0;
+document.getElementById("pause").style.visibility = 'hidden';
+document.getElementById("reset").style.visibility = 'hidden';
 
 function start() {
-    timer = true;
-    stopwatch();
+    check = 1;
+    if (check == 1) {
+        document.getElementById("start").style.visibility = 'hidden';
+        document.getElementById("pause").style.visibility = 'visible';
+        document.getElementById("reset").style.visibility = 'visible';
+    }
 
+    stopwatch();
 }
 
 function pause() {
-    timer = false;
+    check = 0;
+    if (check == 0) {
+        document.getElementById("pause").style.visibility = 'hidden';
+        document.getElementById("start").style.visibility = 'visible';
+    }
 
 }
 
 function reset() {
-    timer = false;
+    check = 0;
+    document.getElementById("pause").style.visibility = 'hidden';
+    document.getElementById("reset").style.visibility = 'hidden';
+    document.getElementById("start").style.visibility = 'visible';
     hr = 0;
     min = 0;
     sec = 0;
-    millisec = 0;
-    document.getElementById("millisec").innerHTML = "00";
-    document.getElementById("sec").innerHTML = "00";
-    document.getElementById("min").innerHTML = "00";
-    document.getElementById("hr").innerHTML = "00";
-
-
+    milisec = 0;
+    document.getElementById("time").innerHTML = display_time;
 }
 
-function stopwatch() {
-    if (timer == true) {
-        millisec = millisec + 1;
 
-        if (millisec == 100) {
+function stopwatch() {
+    if (check == 1) {
+        milisec = milisec + 1;
+
+        if (milisec == 100) {
             sec = sec + 1;
-            millisec = 0;
+            milisec = 0;
 
         }
         if (sec == 60) {
@@ -48,10 +61,8 @@ function stopwatch() {
             min = 0;
             sec = 0;
         }
-        document.getElementById("millisec").innerHTML = millisec;
-        document.getElementById("sec").innerHTML = sec;
-        document.getElementById("min").innerHTML = min;
-        document.getElementById("hr").innerHTML = hr;
+        var display_stopwatch = hr + " : " + min + " : " + sec + " : " + milisec;
+        document.getElementById("time").innerHTML = display_stopwatch;
         setTimeout("stopwatch()", 10)
     }
 }
