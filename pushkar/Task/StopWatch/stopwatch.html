@@ -18,21 +18,24 @@
 </head>
 <body>
     <div id="container" class="container text-center">
-       
-        <div class="time">
-            <span id="hour" class="value">00</span>
-            <span class="txt">:</span>
-            <span id="minute" class="value">00</span>
-            <span class="txt">:</span>
-            <span id="second" class="value">00</span>
-            <span class="txt">:</span>
-            <span id="milisecond" class="value">00</span>
-        </div>
-        <div id="button">
-        <button class="btn btn-success" id="btn" onclick="start()"><i class="far fa-play-circle"></i>
-       Start </button>
-        <button id="btn" class="btn btn-danger" onclick="stop()"><i class="fas fa-stop"></i> Stop</button>
-        <button class="btn btn-warning" id="btn" onclick="reset()"><i class="fas fa-power-off"></i> Reset</button>
+        <div class="row">
+            <div class="col-12">
+                    <span id="hour" class="value">00</span>
+                    <span class="txt">:</span>
+                    <span id="minute" class="value">00</span>
+                    <span class="txt">:</span>
+                    <span id="second" class="value">00</span>
+                    <span class="txt">:</span>
+                    <span id="milisecond" class="value">00</span>
+            </div>
+            <div class="col-12">
+                <div id="button">
+                    <button class="btn btn-success" id="btn" onclick="start()"><i class="far fa-play-circle"></i>
+                   Start </button>
+                    <button id="btn" class="btn btn-danger" onclick="stop()"><i class="fas fa-stop"></i> Stop</button>
+                    <button class="btn btn-warning" id="btn" onclick="reset()"><i class="fas fa-power-off"></i> Reset</button>
+                    </div>
+            </div>
         </div>
     </div>  
 </body>
