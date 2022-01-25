@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar{
+    background-image: linear-gradient(to right , #a517ba,#5f1782);
+    padding: 0 !important;
+}
+.navbar-nav li{
+padding: 0 10px;
+}
+.navbar-nav li a{
+    color: #fff !important;
+    font-weight: 800px !important;
+    float: right;
+    text-align: left;
+}
+.fa-bars{
+    color: #fff ;
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    outline:none !important;
+}
+
+/* --------------banner----------------------- */
+#banner{
+    background-image: linear-gradient(to right , #a517ba,#5f1782);
+    padding-top: 5%;
+    color: #fff;
+}
+.title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+.btn{
+    width: 65px;
+    margin: 20px;
+
+}
+#banner a{
+    color: #fff;
+    text-decoration: none;
+}
+.bottom-img{
+    width: 100%;
+}
+/*  */
+.title::before{
+    content: '';
+    background: #7b1798;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform:translateY(63px)
+}
+#about{
+background: #f8f9fa;
+padding-bottom: 50px;
+padding-top: 50px;
+
+}
+.about-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+/* footer */
+#footer{
+    background-image: linear-gradient(to right , #a517ba,#5f1782);
+    color: #fff
+
+}
+.footer-img{
+    width: 100%;
+}

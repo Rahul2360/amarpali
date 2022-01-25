@@ -1,0 +1,34 @@
+.col-12 {
+    border: 1px solid;
+}
+
+.form-container {
+    margin: 4px;
+}
+
+.card {
+    width: 75rem;
+    margin: auto;
+    margin-top: 4px;
+}
+
+.row {
+    padding: none;
+}
+
+.radio-button input {
+    display: none;
+}
+
+.radio-button label {
+    display: inline-block;
+    background-color: #aaa2a2;
+    padding: 3px 11px;
+    font-family: Arial;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.radio-button input[type="radio"]:checked+label {
+    background-color: cadetblue;
+}

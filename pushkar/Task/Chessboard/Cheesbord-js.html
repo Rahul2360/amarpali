@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainChessBoard">
+    </div>
+    <style>
+        #mainChessBoard 
+{
+    width:800px;
+    height:800px;
+    border:1px solid black;
+}
+
+div
+{
+ width:100px;
+ height:100px;
+ float:left;
+}
+    </style>
+<script>
+    for (var i=0; i< 64; i++){
+    document.getElementById("mainChessBoard").appendChild(document.createElement("div")).style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'black' : 'white';    
+}
+</script>
+</body>
+</html>
