@@ -1,66 +1,61 @@
-
-var hour = '00';
-var minute = '00';
-var second = '00';
-var mili_second = '00';
-var display_time = hour + " : " + minute + " : " + second + " : " + mili_second;
+var date = new Date('04-10-1998 00:00:00:00');
+var hour = date.getHours();
+var minute = date.getMinutes();
+var second = date.getSeconds();
+var mili_second = date.getMilliseconds();
+var display_time = hour + " : " + minute+ " : " + second + " : " + mili_second;
 document.getElementById("timer").innerHTML = display_time;
-var hour2 = parseInt(hour);
-var minute2 = parseInt(minute);
-var second2 = parseInt(second);
-var mili_second2 = parseInt(mili_second);
 
 var check = 0;
-
+document.getElementById("stop").style.visibility='hidden';
+document.getElementById("reset").style.visibility='hidden';
 function start() {
     check = 1;
+    if(check==1){
+        document.getElementById("start").style.visibility='hidden';
+        document.getElementById("stop").style.visibility='visible';
+        document.getElementById("reset").style.visibility='visible';
+    }
+    
     stop_watch();
 }
 
 function stop() {
     check = 0;
+    if(check==0){
+        document.getElementById("stop").style.visibility='hidden';
+        document.getElementById("start").style.visibility='visible';
+    }
 }
 
 function reset() {
     check = 0;
-
-
+    document.getElementById("stop").style.visibility='hidden';
+    document.getElementById("reset").style.visibility='hidden';
+    document.getElementById("start").style.visibility='visible';
+hour=0;
+minute=0;
+second=0;
+mili_second=0;
     document.getElementById("timer").innerHTML = display_time;
 }
 
 function stop_watch() {
     if (check == 1) {
-        mili_second2 = mili_second2 + 1;
-        if (mili_second2 == 100) {
-            second2 = second2 + 1;
-            mili_second2 = +0;
+        mili_second = mili_second + 1;
+        if (mili_second == 100) {
+            second = second + 1;
+            mili_second = +0;
         }
-        if (second2 == 60) {
-            minute2 = minute2 + 1;
-            second2 = +0;
+        if (second == 60) {
+            minute = minute + 1;
+            second = +0;
         }
-        if (minute2 == 60) {
-            hour2 = hour2 + 1;
-            minute2 = +0;
-        }
-
-        var hour_string = hour2;
-        var minute_string = minute2;
-        var second_string = second2;
-        var mili_second_string = mili_second2;
-        if (hour2 < 10) {
-            hour_string = '0' + hour_string;
-        }
-        if (minute2 < 10) {
-            minute_string = '0' + minute_string;
-        }
-        if (second2 < 10) {
-            second_string = '0' + second_string;
-        }
-        if (mili_second2 < 10) {
-            mili_second_string = '0' + mili_second_string;
-        }
-        var display_stopwatch = hour_string + " : " + minute_string + " : " + second_string + " : " + mili_second_string;
+        if (minute == 60) {
+            hour = hour + 1;
+            minute = +0;
+        }  
+        var display_stopwatch = hour + " : " + minute + " : " + second + " : " + mili_second;
         document.getElementById("timer").innerHTML = display_stopwatch;
         setTimeout("stop_watch()", 10);
     }
