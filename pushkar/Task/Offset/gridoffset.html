@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Offset tutorial</title>
+     <!-- Bootstrap Css -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+     <!-- Js and J query -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js">
+    </script>
+</head>
+<body>
+  <div class="container mt-3 ">
+      <div class="row">
+        <div class="col-md-6 border border-dark">
+            Hello
+        </div>
+        <div class="col-md-6 border border-dark">
+            Hello
+        </div>
+      </div>
+      <div class="row">
+          <!-- when offset 6 give it occupy 6 +_ 6=12 space
+        hence row cantain only one column -->
+        <div class="col-md-6 offset-6 border border-dark">
+            Hello
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4  border border-dark">
+            Hello
+        </div>
+        <!-- offset 2 mean 2+6=12 yaani 2 jgh chod k chod k tb 6 ka column bnega -->
+        <div class="col-md-6 offset-2 border border-dark">
+            Hello
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 offset-4  border border-dark">
+            Hello
+        </div>
+        <div class="col-md-6 offset-2  border border-dark">
+            Hello
+        </div>
+        <div class="col-md-2 offset-2  border border-dark">
+            Hello
+        </div>
+      </div>
+  </div>  
+</body>
+</html>
