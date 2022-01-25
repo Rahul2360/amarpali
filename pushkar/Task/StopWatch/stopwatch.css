@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right , grey,black);
+  } 
+  #container{
+      color:#d7dfe4;
+  }
+  .value{
+      font-size: 150px;
+      font-weight: bold;
+  }
+  .txt{
+      font-size: 150px;
+      font-weight: bold;
+  }
+  #button{
+    text-align: center;
+    margin-top: 40px;
+  }
+  #btn{
+      padding: 7px 25px;
+      margin: 0px 10px;
+      
+  }
