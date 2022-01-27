@@ -5,10 +5,14 @@ var second = date.getSeconds();
 var mili_second = date.getMilliseconds();
 var display_time = hour + " : " + minute + " : " + second + " : " + mili_second;
 document.getElementById("timer").innerHTML = display_time;
+var my_array = [];
+var i = 0;
+
 
 var check = 0;
 document.getElementById("stop").style.visibility = 'hidden';
 document.getElementById("reset").style.visibility = 'hidden';
+document.getElementById("show").style.display = 'none';
 function start() {
     check = 1;
     if (check == 1) {
@@ -33,11 +37,14 @@ function reset() {
     document.getElementById("stop").style.visibility = 'hidden';
     document.getElementById("reset").style.visibility = 'hidden';
     document.getElementById("start").style.visibility = 'visible';
+
+    var lap = hour + ":" + minute + ":" + second + ":" + mili_second;
     hour = 0;
     minute = 0;
     second = 0;
     mili_second = 0;
     document.getElementById("timer").innerHTML = display_time;
+    store(lap);
 }
 
 function stop_watch() {
@@ -59,4 +66,31 @@ function stop_watch() {
         document.getElementById("timer").innerHTML = display_stopwatch;
         setTimeout("stop_watch()", 10);
     }
+}
+
+
+function store(lap) {
+
+    if (i < 5) {
+        my_array.push(lap);
+        i++;
+    }
+    if (i >= 5) {
+        my_array.shift();
+        my_array.push(lap);
+    }
+
+}
+
+
+function lap_history() {
+    document.getElementById("show").style.display = 'inline';
+    let text = "";
+  for(var l=0; l<my_array.length; l++){
+      
+      text += (l+1)+": "+ my_array[l]+"<br>";
+        document.getElementById("history").innerHTML = text;
+      } 
+     
+    
 }
