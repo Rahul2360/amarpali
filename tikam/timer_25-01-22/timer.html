@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            background-color: rgb(46, 44, 44);
+            
+        }
+       
+        .digit{
+            line-height: 3em;
+            background-color: cornflowerblue;
+        }
+        .btn{
+            margin-top: 2em;
+            padding: 15px ;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Set timer</h3>
+        <h3 id="demo"></h3>
+        <div id="time">
+            <input class="digit" id="hr" value="00" type="number" max="23" min="0">
+            <span class="text">Hr</span>
+            <input class="digit" id="min" value="00" type="number" max="59" min="0">
+            <span class="text">Min</span>
+            <input class="digit" id="sec" value="00" type="number" max="59" min="0">
+            <span class="text">Sec</span>
+            <input class="digit" id="ms" value="00" type="number" max="99" min="0">
+            <span class="text">ms</span>
+        </div>
+        <div id="btn-container">
+            <button class="btn" id="start" onclick="start()">Start</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+            <button class="btn" id="pause" onclick="pause()">Pause</button>
+        </div>
+    </div>
+    <p id="demo"></p>
+    <script>
+        var hour = document.getElementById("hr");
+        var minute = document.getElementById("min");
+        var second = document.getElementById("sec");
+        var millisecond = document.getElementById("ms");
+        var flag = false;
+      
+
+        function pause() {
+            flag = false;
+            document.getElementById("start").style.visibility="";
+            
+        }
+        function reset() {
+            flag = false;
+            hour.value = 0;
+            minute.value = 0;
+            second.value = 0;
+            millisecond.value = 0;
+            document.getElementById("hr").innerHTML = "0" + hour;
+            document.getElementById("min").innerHTML = "0" + minute;
+            document.getElementById("sec").innerHTML = "0" + second;
+            document.getElementById("ms").innerHTML = "0" + millisecond;
+            document.getElementById("start").style.visibility="";
+        }
+        function start() {
+            flag = true;
+            timer();
+            if ((millisecond.value == 0) && (second.value == 0) && (minute.value == 0) && (hour.value == 0)) {
+                flag=false;
+            document.getElementById("start").style.visibility="";}
+            else 
+            {
+                document.getElementById("start").style.visibility="hidden";  
+            }
+
+        }
+        function timer() {
+            if (flag == true) {
+
+                if ((millisecond.value == 0) && (second.value == 0) && (minute.value == 0) && (hour.value == 0)) {
+                    hour.value = 0;
+                    minute.value = 0;
+                    second.value = 0;
+                    millisecond.value = 0;
+                    document.getElementById("hr").innerHTML =0;
+                    document.getElementById("min").innerHTML = 0;
+                    document.getElementById("sec").innerHTML = 0;
+                    document.getElementById("ms").innerHTML = 0;
+                   
+                }
+                else if
+                    (millisecond.value != 0) {
+                    millisecond.value--;
+                }
+                else if ((second.value !== 0) && (millisecond.value == 0) && (second.value > 0)) {
+
+                    millisecond.value = 100;
+                    second.value--;
+                }
+                else if ((minute.value !== 0) && (second.value == 0) && (minute.value > 0)) {
+
+
+                    second.value = 60;
+                    minute.value--;
+                }
+                else if ((hour.value !== 0) && (minute.value == 0) && (hour.value > 0) && (hour.value < 24)) {
+
+
+                    minute.value = 60;
+                    hour.value--;
+                }
+
+                document.getElementById("hr").innerHTML = hour.value;
+                document.getElementById("min").innerHTML = minute.value;
+                document.getElementById("sec").innerHTML = second.value;
+                document.getElementById("ms").innerHTML = millisecond.value;
+
+
+                setTimeout("timer()", 10);
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
