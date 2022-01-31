@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Format</title>
+</head>
+<body>
+    <h1>String Formatting</h1>
+</body>
+<script>
+    let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    console.log(txt.length)
+    let str = "Apple, Banana, Kiwi";
+    str=str.slice(7,13);//7 se start 12 tak 
+    console.log(str);
+    str = "Apple, Banana, Kiwi";
+    str=str.slice(-12,-6);//If a parameter is negative, the position is counted from the end of the string. -11tk
+    console.log(str);
+    //The difference is that substring() cannot accept negative indexes.
+    //seond argument
+//     let str = "Apple, Banana, Kiwi"; Explin
+// let part = str.substr(7, 6);
+    str = "Apple, Banana, Kiwi";
+    let part = str.substring(7, 13);
+    console.log(part);
+     str="javascript";  
+    console.log(str.charAt(2));    
+    let s1="javascript ";  
+    let s2="concat example";  
+    let s3=s1.concat(s2);  
+    console.log(s3);    
+    str="This is PushkarBisht website"; 
+    console.log(str.split(" ")); 
+
+    s1="javascript from javatpoint indexof";  
+  let  n=s1.indexOf("from");  
+  console.log(n);
+  n=s1.lastIndexOf("java");  
+  console.log(n);
+  s2=s1.toLowerCase(); 
+  console.log(s2);
+  s2=s1.toUpperCase();
+  console.log(s2); 
+
+  //trim remove white space from string
+  s1="     javascript trim    ";  
+  s2=s1.trim();  
+  console.log(s2);
+</script>
+</html>

@@ -1,0 +1,18 @@
+h6 {
+    text-align: justify;
+}
+
+td {
+    padding: 10px;
+}
+
+.formborder {
+    width: 600px;
+    height: 700px;
+    margin: 10px;
+    border: 10px solid rgba(169, 215, 233);
+}
+
+.button {
+    position: absolute;
+}

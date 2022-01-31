@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain Object</title>
+</head>
+<body>
+    <h1>Javascript Object:-</h1>
+    <pre>
+        JavaScript object is a non-primitive data-type that allows you to store multiple collections of data.
+
+        Most Imp:- Note: If you are familiar with other programming languages, JavaScript objects are a bit different. You do not need to create classes in order to create objects.
+        // objecExample
+        const student = {
+            firstName: 'ram',
+            class: 10
+        };
+
+    </pre>
+</body>
+<script>
+    //Object is data type in Javascript
+    let obj={
+      name:"Pushkar Bisht",
+      class:"MCA",
+      age:22,
+      os:"Windows 11"
+    }
+    for(let key in obj){
+      console.log(`The ${key} of object is ${obj[key]}` );
+     // console.log(key);//gives key value left hand side of object
+      //console.log(obj[key]);//give value of key right hand side
+      //console.log(obj);
+    }
+        // nested object
+const student = { 
+    name: 'John', 
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+}
+//console.log(student.marks);
+//console.log(student.marks.science); 
+for(let key in student.marks){
+      console.log(`The ${key} marks is ${student.marks[key]}` );
+      }
+</script>
+</html>

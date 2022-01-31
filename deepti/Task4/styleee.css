@@ -1,0 +1,12 @@
+    h1 {
+        align-items: center;
+    }
+    
+    td {
+        padding: 15px;
+    }
+    
+    tr {
+        display: flex;
+        flex-flow: row wrap;
+    }
