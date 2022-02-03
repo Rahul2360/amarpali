@@ -1,62 +1,47 @@
-var date = new Date(2018, 6, 5, 00, 00, 00, 00);
-var hr = date.getHours();
-var min = date.getMinutes();
-var sec = date.getSeconds();
-var display_time = hr + " : " + min + " : " + sec;
-document.getElementById("time").innerHTML = display_time;
+var start = document.getElementById("start");
+var pause = document.getElementById("pause");
+var reset = document.getElementById("reset");
 
-var check = 0;
-document.getElementById("pause").style.visibility = 'hidden';
-document.getElementById("reset").style.visibility = 'hidden';
+var h = document.getElementById("hour");
+var m = document.getElementById("minute");
+var s = document.getElementById("second");
 
-function start() {
-    check = 1;
-    if (check == 1) {
-        document.getElementById("start").style.visibility = 'hidden';
-        document.getElementById("pause").style.visibility = 'visible';
-        document.getElementById("reset").style.visibility = 'visible';
-    }
+var startTimer = null;
 
-    startTimer();
-}
-
-function pause() {
-    check = 0;
-    if (check == 0) {
-        document.getElementById("pause").style.visibility = 'hidden';
-        document.getElementById("start").style.visibility = 'visible';
+function timer() {
+    if (h.value == 0 && m.value == 0 && s.value == 0) {
+        h.value = 0;
+        m.value = 0;
+        s.value = 0;
+    } else if (s.value != 0) {
+        s.value--;
+    } else if (m.value != 0 && s.value == 0) {
+        s.value = 59;
+        m.value--;
+    } else if (h.value != 0 && m.value == 0) {
+        m.value = 60;
+        h.value--;
     }
 
 }
 
-function reset() {
-    check = 0;
-    document.getElementById("pause").style.visibility = 'hidden';
-    document.getElementById("reset").style.visibility = 'hidden';
-    document.getElementById("start").style.visibility = 'visible';
-    hr = 0;
-    min = 0;
-    sec = 0;
-
-    document.getElementById("time").innerHTML = display_time;
+function stopTimer() {
+    clearInterval(startTimer);
 }
 
-function startTimer() {
-    check = setInterval(function() {
-        if (hr.value == 00 && min.value == 0 && sec.value) {
-            hr.value = 0;
-            min.value = 0;
-            sec.value = 0;
-        } else if (sec.value != 0) {
-            sec.value--;
-        } else if (min.value != 0 && sec.value == 0) {
-            sec.value = 59;
-            min.value--;
-        } else if (hr.value != 0 && min.value == 0) {
-            min.value = 60;
-            hr.value--;
-        }
-        return;
+start.addEventListener('click', function() {
+    function startInterval() {
+        startTimer = setInterval(function() {
+            timer();
+        }, 1000);
 
-    }, 1000)
-}
+    }
+    startInterval();
+})
+
+reset.addEventListener('click', function() {
+    h.value = 0;
+    m.value = 0;
+    s.value = 0;
+    stopTimer();
+})

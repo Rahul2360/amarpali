@@ -4,86 +4,89 @@ var min = date.getMinutes();
 var sec = date.getSeconds();
 var milisec = date.getMilliseconds();
 var display_time = hr + " : " + min + " : " + sec + " : " + milisec;
-document.getElementById("time").innerHTML = display_time;
+document.getElementById("display").innerHTML = display_time;
 
-var check = 0;
-document.getElementById("pause").style.visibility = 'hidden';
-document.getElementById("reset").style.visibility = 'hidden';
+let displayhours = hr;
+let displayminutes = min;
+let displayseconds = sec;
+let displaymiliseconds = milisec;
+let checkstatus = "stopped";
+let interval = null;
+let lapNow = null;
 
 function start() {
-    check = 1;
-    if (check == 1) {
-        document.getElementById("start").style.visibility = 'hidden';
-        document.getElementById("pause").style.visibility = 'visible';
-        document.getElementById("reset").style.visibility = 'visible';
+    milisec = milisec + 1;
+
+    if (milisec == 100) {
+        sec = sec + 1;
+        milisec = 0;
+
+    }
+    if (sec == 60) {
+        min = min + 1;
+        sec = 0;
+    }
+    if (min == 60) {
+        hr = hr + 1;
+        min = 0;
+        sec = 0;
     }
 
-    stopwatch();
+    if (milisec < 10) {
+        displaymiliseconds = "0" + milisec;
+    } else {
+        displaymiliseconds = milisec;
+    }
+    if (sec < 10) {
+        displayseconds = "0" + sec;
+    } else {
+        displayseconds = sec;
+    }
+    if (min < 10) {
+        displayminutes = "0" + min;
+    } else {
+        displayminutes = min;
+    }
+    if (hr < 10) {
+        displayhours = "0" + hr;
+    } else {
+        displayhours = hr;
+    }
+
+    var display_stopwatch = displayhours + " : " + displayminutes + " : " + displayseconds + " : " + displaymiliseconds;
+    document.getElementById("display").innerHTML = display_stopwatch;
 }
 
-function pause() {
-    check = 0;
-    if (check == 0) {
-        document.getElementById("pause").style.visibility = 'hidden';
-        document.getElementById("start").style.visibility = 'visible';
-    }
+function startStop() {
+    if (checkstatus === "stopped") {
+        interval = setInterval(start, 10);
+        checkstatus = "started";
+        document.getElementById('startbtn').innerHTML = "Stop";
 
+    } else {
+        window.clearInterval(interval);
+        checkstatus = "stopped";
+        document.getElementById('startbtn').innerHTML = "Start";
+    }
 }
 
 function reset() {
-    check = 0;
-
-    document.getElementById("pause").style.visibility = 'hidden';
-    document.getElementById("reset").style.visibility = 'hidden';
-    document.getElementById("start").style.visibility = 'visible';
+    clearInterval(interval);
     hr = 0;
     min = 0;
     sec = 0;
     milisec = 0;
-    document.getElementById("time").innerHTML = display_time;
+    displayhours = 0;
+    displayminutes = 0;
+    displayseconds = 0;
+    displaymiliseconds = 0;
+    checkstatus = "stopped"
+    document.getElementById("display").innerHTML = display_time;
+    document.getElementById("laprecord").innerHTML = "";
 
-
-}
-
-
-function stopwatch() {
-    if (check == 1) {
-        milisec = milisec + 1;
-
-        if (milisec == 100) {
-            sec = sec + 1;
-            milisec = 0;
-
-        }
-        if (sec == 60) {
-            min = min + 1;
-            sec = 0;
-        }
-        if (min == 60) {
-            hr = hr + 1;
-            min = 0;
-            sec = 0;
-        }
-        var display_stopwatch = hr + " : " + min + " : " + sec + " : " + milisec;
-        document.getElementById("time").innerHTML = display_stopwatch;
-        setTimeout("stopwatch()", 10)
-    }
 }
 
 function lap() {
-    count = 0;
-    if (count < 5) {
-        const li = document.createElement("li");
-        const number = document.createElement("span");
-        const timestamp = document.createElement("span");
-
-
-        timestamp.innerHTML = ` &nbsp &nbsp ${hr} : ${min} : ${sec} : ${milisec}`;
-        count = count + 1;
-        number.innerHTML = `#` + count;
-        lap.appendChild(li);
-        li.appendChild(number);
-        li.appendChild(timestamp);
-    }
-
+    lapNow = displayhours + " : " + displayminutes + " : " + displayseconds + " : " + displaymiliseconds;
+    document.getElementById('laprecord').innerHTML = document.getElementById('laprecord').innerHTML + "<p>" + lapNow + "</p>";
 }
