@@ -40,7 +40,12 @@ function checkForm() {
   if (soldItemNo <= 0) {
     alert("Product cannot be zero or negative");
     return false;
-  } else if (comapre >= todayDate) {
+  } 
+  else if(product==null){
+    alert("Please Select a Product");
+    return false;
+  }
+  else if (comapre >= todayDate) {
     alert("Date is Invalid");
     document.getElementById("date").value = todayDate
       .toISOString()
