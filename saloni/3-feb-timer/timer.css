@@ -1,0 +1,19 @@
+body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            background-color: grey;
+            
+        }
+       
+        .digit{
+            line-height: 3em;
+            background-color: white;
+        }
+        .btn{
+            margin-top: 2em;
+            padding: 15px ;
+            color: blue;
+            
+        }

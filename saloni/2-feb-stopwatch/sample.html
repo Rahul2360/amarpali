@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+     <link rel="stylesheet"  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="stop.css">
+
+    <title>StopWatch</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="contain">
+            <div class="time" id="timer">
+            <span id="hr">00 :</span>
+            <span id="min">00 :</span>
+            <span id="sec">00 :</span>
+            <span id="mili">00 </span>
+        </div>
+        <div class="buttons d-flex justify-content-center text-center">
+            
+            <button class="btn bg-success rounded-circle ml-2" onclick="pause()" id="pause" ><i class="far fa-pause" style="font-size: 36px;" ></i></button>
+            <button class="btn bg-success rounded-circle ml-2 " onclick="start()" id="start" ><i class="far  fa-play" style="font-size: 36px;" ></i></button>
+            <button class="btn bg-success rounded-circle ml-2" onclick="reset()" id="reset" ><i class="far fa-power-off" style="font-size: 36px;" ></i></button>
+
+        </div>
+        </div>
+        <div class="logs text-center">
+            <ul id="lap">
+              
+            </ul>
+              <button class="btn bg-warning rounded-pill ml-2" onclick="clearAll()" id="clear" ><i class="far fa-soap" style="font-size: 21px;" >Clear All</i></button>
+        </div>
+
+    </div>
+    <script src="stop.js">  </script>
+   
+  </body>
+
+</html>
