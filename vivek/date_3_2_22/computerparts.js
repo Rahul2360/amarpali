@@ -33,7 +33,7 @@ btn.addEventListener('click', (e) => {
         day = dayArray[day];
         var month = currentDate.getMonth();
         month = monthArray[month];
-        var dat = currentDate.getDate();
+        var todaydate = currentDate.getDate();
         var year = currentDate.getFullYear();
     }
     if (sold == 0) {
@@ -44,7 +44,7 @@ btn.addEventListener('click', (e) => {
     }
 
     var time = data[4];
-    tempdata[0] = `${day} ${month} ${dat} ${year} ${time}`;
+    tempdata[0] = `${day} ${month} ${todaydate} ${year} ${time}`;
     tempdata[1] = data[0];
     tempdata[2] = data[1];
     tempdata[3] = data[2];
