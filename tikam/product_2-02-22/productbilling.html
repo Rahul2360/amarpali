@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Billing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+      .container1{
+          border:1px solid black;
+          padding:5px;
+      }
+      #table{
+          border:1px solid black;
+      }
+  </style>
+
+</head>
+   <body>
+       <div class="container">
+           <div class="container1">
+           <h1>Product Billing</h1>
+           <hr style="border: 1px solid black;"><hr>
+           <form id="productdetail">
+            
+            <div class="form-group row">
+                <label for="product" class="col-sm-2 col-form-label">Product</label>
+                <div class="col-sm-10">
+                   
+                    <select name="" id="product" onchange="change()" class="col-sm-10">
+                        <option value="RAM">RAM</option>
+                        <option value="Hard Disk">Hard Disk</option>
+                        <option value="Graphic Card">Graphic Card</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Monitor">Monitor</option>
+                        <option value="Motherboard">Motherboard</option>
+                      </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="Price" class="col-sm-2 col-form-label">Unit Price</label>
+                <div class="col-sm-10">
+                 
+                  <select name="" id="price" class="col-sm-10" >
+                    <option value="RAM">4000</option>
+                        <option value="Hard Disk">15000</option>
+                        <option value="Graphic Card">10000</option>
+                        <option value="Mouse">100</option>
+                        <option value="Monitor">8500</option>
+                        <option value="Motherboard">10000</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="productsold" class="col-sm-2 col-form-label">Number of Product Sold</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="productsold" min="0" required >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="date" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="date" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="time" class="col-sm-2 col-form-label">Time</label>
+                <div class="col-sm-10">
+                  <input type="time" class="form-control" id="time" required>
+                </div>
+              </div>
+              <button type="button" onclick="submit()" class="btn btn-primary">Primary</button>
+           </form>
+           </div>
+           <div id="table ">
+               <h1>History</h1>
+               <table class="table table-bordered">
+                   <thead>
+                       <tr>
+                           <th scope="col">S.no</th>
+                           <th scope="col">Date</th>
+                           <th scope="col">Product</th>
+                           <th scope="col">Price</th>
+                           <th scope="col">Unit Sold</th>
+                           <th scope="col">Total</th>
+                           <th scope="col">profit</th>
+                       </tr>
+                       <tbody id="tablebody"></tbody>
+                   </thead>
+               </table>
+           </div>
+       </div>
+       <script>
+          let sellingprice={RAM:"4000",HardDrive:"15000",GraphicCard:"10000",Mouse:"100",Monitor:"8500",Motherboard:"10000"};
+          let Buyingprice={RAM:"2000",HardDrive:"8000",GraphicCard:"7000",Mouse:"60",Monitor:"5500",Motherboard:"8000"};
+          function change() 
+             {
+                 var input1=document.getElementById("product")
+             var input2 = document.getElementById('price');
+              input2.value = input1.value;
+             }
+             function validate()
+             {
+                var inputdate = document.getElementById("date").value;
+                var varDate = new Date(inputdate);
+                var today = new Date();
+                 //today.setHours(0,0,0,0);
+                var result=today.getTime();-varDate.getTime();
+                 if(result>=0) {
+                   alert("Working!");
+                   }
+                   else
+                    {
+                       alert("set date correctly");
+                   }
+             }
+             function submit(e){
+                 validate();
+                 let printdate=document.getElementById("date");
+
+                let printproduct=document.getElementById("product").value;
+                let printprice=document.getElementById("price").value;
+                let printsold=document.getElementById("productsold").value;
+                let printtotal=printprice;
+                let printprofit=printprice-Buyingprice.printproduct;
+
+                let printtablebody=document.getElementById("tablebody");
+               // let uistring='<tr>
+               //                   <td>s.no</td>
+               //                   <td>${printdate}</td>
+               //                   <td>${printproduct}</td>
+               //                   <td>printprice</td>
+               //                   <td>printsold</td>
+               //                   <td>printtotal</td>
+               //                   <td>printprofit</td>
+               //                   </tr>';
+                                  e.preventDefault();
+             }
+       </script>
