@@ -14,6 +14,7 @@ document.getElementById("stop").style.visibility = 'hidden';
 document.getElementById("reset").style.visibility = 'hidden';
 document.getElementById("show").style.display = 'none';
 function start() {
+    document.getElementById("show").style.display = 'none';
     check = 1;
     if (check == 1) {
         document.getElementById("start").style.visibility = 'hidden';
@@ -86,11 +87,11 @@ function store(lap) {
 function lap_history() {
     document.getElementById("show").style.display = 'inline';
     let text = "";
-  for(var l=0; l<my_array.length; l++){
-      
-      text += (l+1)+": "+ my_array[l]+"<br>";
+    for (var l = 0; l < my_array.length; l++) {
+
+        text += (l + 1) + ": " + my_array[l] + "<br>";
         document.getElementById("history").innerHTML = text;
-      } 
-     
-    
+    }
+
+
 }
