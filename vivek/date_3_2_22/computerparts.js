@@ -72,7 +72,7 @@ btn.addEventListener('click', (e) => {
     tempdata[2] = data[1];
     tempdata[3] = data[2];
     tempdata[4] = tempdata[2] * tempdata[3];
-    if (profit.value == "") {
+    if (profit==null||profit.value=="") {
         errorflag=1;
         select = document.getElementById('select');
         var selectError=document.createElement("span");
