@@ -72,7 +72,7 @@ btn.addEventListener('click', (e) => {
     tempdata[2] = data[1];
     tempdata[3] = data[2];
     tempdata[4] = tempdata[2] * tempdata[3];
-    if (profit == null) {
+    if (profit.value == "") {
         errorflag=1;
         select = document.getElementById('select');
         var selectError=document.createElement("span");
@@ -103,12 +103,11 @@ btn.addEventListener('click', (e) => {
     // console.log(tempdata);\
     if(errorflag==1){
         setTimeout(()=>{
-            console.log("hey");
         location.reload();
         },4000);
         }
 
-    if (sold != 0 && currentDate < today ) {
+    if (sold != 0 && currentDate < today && profit.value!=""  ) {
     dataedit();
     }
 })
