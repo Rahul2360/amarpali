@@ -10,21 +10,38 @@ var tempdata = [];
 var n = 1;
 var profit;
 const fetchdata = document.getElementsByClassName('fetch');
+var sell;
+var select;
+var inputdate;
+var dateError;
+var errorflag=0;
 // console.log(fetchdata.length);
 btn.addEventListener('click', (e) => {
     var sold = document.getElementById('sold').value | 0
     e.preventDefault()
     date = document.getElementById('date').value;
     if (date == "" || fetchdata[4].value == "") {
-        alert("date and time cant be empty");
+        errorflag=1;
+        inputdate = document.getElementById('inputdate');
+        dateError=document.createElement("span");
+        dateError.innerHTML="&nbspdate and time cant be empty"
+        dateError.style.color="red";
+        inputdate.appendChild(dateError);
 
     }
 
     currentDate = new Date(date);
     today = new Date();
     if (currentDate > today) {
-        alert("Invalid Date");
+        errorflag=1;
+        inputdate = document.getElementById('inputdate');
+        dateError=document.createElement("span");
+        dateError.innerHTML="&nbspinvalid date"
+        dateError.style.color="red";
+        inputdate.appendChild(dateError);
+
     }
+    
     /* Another method*/
     else {
         dayArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thus', 'Fri', 'Sat'];
@@ -36,8 +53,14 @@ btn.addEventListener('click', (e) => {
         var todaydate = currentDate.getDate();
         var year = currentDate.getFullYear();
     }
-    if (sold == 0) {
-        alert("product cant be zero")
+    if (sold<1) {
+        errorflag=1;
+        sell = document.getElementById('sell');
+        var soldError=document.createElement("span");
+        soldError.innerHTML="&nbspproduct cant be zero or less than zero"
+        soldError.style.color="red";
+        sell.appendChild(soldError);
+        
     }
     for (let i = 0; i < fetchdata.length; i++) {
         data[i] = fetchdata[i].value;
@@ -50,10 +73,15 @@ btn.addEventListener('click', (e) => {
     tempdata[3] = data[2];
     tempdata[4] = tempdata[2] * tempdata[3];
     if (profit == null) {
-        alert("please select the item");
-        location.reload();
+        errorflag=1;
+        select = document.getElementById('select');
+        var selectError=document.createElement("span");
+        selectError.innerHTML="&nbspplease select the item"
+        selectError.style.color="red";
+        select.appendChild(selectError);
+        // location.reload();
     }
-    if (profit.value == 'Monitor') {
+    else if (profit.value == 'Monitor') {
         //  console.log(val.value);
         tempdata[5] = tempdata[4] - 5550 * data[2];;
     }
@@ -73,7 +101,12 @@ btn.addEventListener('click', (e) => {
         tempdata[5] = tempdata[4] - 2000 * data[2];
     }
     // console.log(tempdata);\
-  
+    if(errorflag==1){
+        setTimeout(()=>{
+            console.log("hey");
+        location.reload();
+        },4000);
+        }
 
     if (sold != 0 && currentDate < today ) {
     dataedit();
@@ -98,7 +131,10 @@ function product(val) {
     profit = val;
     document.getElementById("price").setAttribute("style", "background-color:lightgrey; border-radius: 3px; ")
     //console.log(val.value);
-    if (val.value == 'Monitor') {
+    if(val.value==""){
+        document.getElementById('price').value = '';
+    }
+    else if (val.value == 'Monitor') {
         //  console.log(val.value);
         document.getElementById('price').value = '8500';
     }
@@ -118,6 +154,7 @@ function product(val) {
         document.getElementById('price').value = '4000';
     }
 }
+
 /*var price;
 price=document.getElementById('price'); //another short approach from youtube
 const SellingPrice= {
