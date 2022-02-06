@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurnOnJs</title>
+</head>
+<body>
+    <span>Plese turn on the JavaScript from Chrome Settings then refresh and click the button </span>
+     <button  id="btn"></button>
+    <script>
+            // event.preventDefault();
+           var btn=document.getElementById("btn");
+         var anchor=document.createElement("a");
+         anchor.setAttribute("href","computerparts.html");
+         anchor.innerHTML="click me";
+         btn.appendChild(anchor);
+         
+    </script>
+</body>
+</html>
