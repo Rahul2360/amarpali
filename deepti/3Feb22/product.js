@@ -1,7 +1,7 @@
 var price, product, sellingPrice;
 var quantity, BuyPrice, time;
 
-price = document.getElementById("price");
+price = document.getElementById("price").value;
 var btn = document.getElementById("btn");
 var table = document.getElementById("createtabl");
 
@@ -30,6 +30,7 @@ $(document).ready(function() {
 })
 
 function priceFound(productName) {
+    price = document.getElementById("price");
     sellingPrice = selling_price[productName.value];
     price.value = sellingPrice;
     product = productName.value;
