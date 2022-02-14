@@ -98,12 +98,10 @@ def update_others():
     if len(data_dict)!=5:
         return("invalid number of attributes")
     elif len(data_dict)==5:
-        id=data_dict["id"]
         response_dict={}
-        first_name=data_dict["first_name"]
-        last_name=data_dict["last_name"]
-        gender=data_dict["gender"]
-        password=data_dict["password"]
+        data_list=[]
+        for key in data_dict:
+            data_list.append(data_dict[key])
         wb_s=xl.load_workbook("user_data.xlsx")
         ws_s=wb_s.worksheets[0]
         row_s=ws_s.max_row
@@ -111,13 +109,13 @@ def update_others():
         for i in range(2,row_s+1):
             match=ws_s.cell(row=i,column=1).value
             old_password=ws_s.cell(row=i,column=6).value 
-            if match==id:
+            if match==data_list[0]:
                 old_password=ws_s.cell(row=i,column=6).value 
-                if password!=old_password:  
-                    ws_s.cell(row=i,column=2).value=first_name
-                    ws_s.cell(row=i,column=3).value=last_name
-                    ws_s.cell(row=i,column=4).value=gender
-                    ws_s.cell(row=i,column=6).value=password
+                if data_list[4]!=old_password:  
+                    ws_s.cell(row=i,column=2).value=data_list[1]
+                    ws_s.cell(row=i,column=3).value=data_list[2]
+                    ws_s.cell(row=i,column=4).value=data_list[3]
+                    ws_s.cell(row=i,column=6).value=data_list[4]
                     for j in range(1,col_s):
                         head=ws_s.cell(row=1,column=j).value
                         response_dict[head]=ws_s.cell(row=i,column=j).value
